@@ -7,7 +7,7 @@ We will georeference a map of the Alor-Pantar languages in Indonesia from the ar
 
 <figure>
   <img src="images/map3papuan.jpg" alt="Map of the Alor Pantar languages" width="500"/>
-  <figcaption>Map of the Alor Pantar languages from Schapper (2020)</figcaption>
+  <figcaption><em>Map of the Alor Pantar languages from Schapper (2020)</em></figcaption>
 </figure>
 
 ## Adding a basemap
@@ -31,6 +31,7 @@ Now we can use the **Georeferencer** plugin to align the Alor-Pantar map with th
   <img src="images/georeferencer.png" alt="Open the Georeferencer plugin" width="800"/>
   <figcaption><em>Open the Georeferencer plugin</em></figcaption>
 </figure>
+
 &nbsp;
 
 The **Georeferencer** window is divided into two main tiles. The map tile in the top shows the raster image that will be georeferenced. In this tile you'll add the ground control points (GCPs) to align the language map with the basemap. The bottom tile shows the GCP Table with all ground control points you’ve added, including their pixel locations, geographic coordinates, and an estimate of their accuracy. To add the language map to the top tile, click the `Open Raster...` icon and navigate to the location of the raster image file on your computer.
