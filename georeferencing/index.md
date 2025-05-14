@@ -15,9 +15,11 @@ Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS.
 
 <figure>
   <img src="images/hcmgis_basemap.png" alt="Adding th Carto Basic basemap in QGIS" width="800" />
+   <figcaption>Adding the Carto Basic map as basemap</figcaption>
 </figure>
-*Adding the Carto Basic map as basemap*
 
+&nbsp; 
+&nbsp; 
 
 The **HCMGIS** plugin provides quick access to a wide range of ready-to-use basemaps, including OpenStreetMap, Google Maps, and satellite imagery. If the plugin is not already installed, you’ll need to [install it](https://mapscaping.com/hcmgis-plugin-in-qgis/).
 
