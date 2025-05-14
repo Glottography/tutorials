@@ -14,8 +14,8 @@ We will georeference a map of the Alor-Pantar languages in Indonesia from the ar
 Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS. The basemap serves as a reference for accurately aligning the language map. To do this, go to `HCMGIS > Basemaps > Vector tiles > Carto Basic` to add the **Carto Basic** basemap from the **HCMGIS** plugin. **Carto Basic** is a clean, visually neutral basemap that uses data from **OpenStreetMap**.
 
 <figure>
-  <img src="images/hcmgis_basemap.png" alt="Adding a basemap" width="800"/>
-  <figcaption>Adding the Carto Basic map as basemap </figcaption>
+  <img src="images/hcmgis_basemap.png" alt="Adding a Carto Basic basemap in QGIS" width="800"/>
+  <figcaption style="font-size: 0.85em; margin-top: 0.3em; color: #555;">Adding the Carto Basic map as basemap</figcaption>
 </figure>
 
 The **HCMGIS** plugin provides quick access to a wide range of ready-to-use basemaps, including OpenStreetMap, Google Maps, and satellite imagery. If the plugin is not already installed, you’ll need to [install it](https://mapscaping.com/hcmgis-plugin-in-qgis/).
