@@ -129,7 +129,7 @@ In the **`Transformation Parameters`** section, define the technical settings fo
   - **Projective**: Maintains straight lines; used for perspective correction.
 
 
-In the Alor-Pantar map, the projection of the source map is unknown, but only minor distortions are expected due to its location near the equator. For this reason, we use a second-degree polynomial transformation (Polynomial 2).In any case, treat recommendations for a specific transformation type as general guidelines rather than strict rules. No single transformation type is guaranteed to work perfectly in all situations. It’s often best to try out different methods and compare the results to determine which one provides the most accurate alignment.
+In the Alor-Pantar map, the projection of the source map is unknown, but only minor distortions are expected due to its location near the equator. For this reason, we use a second-degree polynomial transformation (Polynomial 2). In any case, treat recommendations for a specific transformation type as general guidelines rather than strict rules. No single transformation type is guaranteed to work perfectly in all situations. It’s often best to try out different methods and compare the results to determine which one provides the most accurate alignment.
 
 - **`Target CRS`**: The coordinate reference system (CRS) that the georeferenced map image will be transformed into.  
   If you're unsure which CRS to use, it's generally safest to set it to `EPSG:4326 (WGS 84)`, a widely used global standard. Alternatively, you can match the CRS of the basemap. In our case, that would be `EPSG:3857 (WGS 84 / Pseudo-Mercator)`.  
