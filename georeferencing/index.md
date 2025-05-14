@@ -15,7 +15,7 @@ Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS.
 
 <figure>
   <img src="images/hcmgis_basemap.png" alt="Adding th Carto Basic basemap in QGIS" width="800" />
-   <figcaption>Adding the Carto Basic map as basemap</figcaption>
+   <figcaption><small>Adding the Carto Basic map as basemap</small>small></figcaption>
 </figure>
 
 &nbsp; 
