@@ -157,7 +157,7 @@ Finally, click the **`Start Georeferencing`** icon to begin aligning the languag
 The georeferenced map is added as a new layer. By setting the layer to transparent, you can verify that it aligns well with the basemap.
 
 <figure>
-  <img src="images/georeferenced_map.png" alt="The georeferenced map" width="500"/>
+  <img src="images/georeferenced_map.png" alt="The georeferenced map" width="800"/>
   <figcaption><em>The georeferenced map.</em></figcaption>
 </figure>
 
