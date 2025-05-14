@@ -38,9 +38,10 @@ The **Georeferencer** window is divided into two main tiles. The map tile in the
 
 <figure>
   <img src="images/screenshot_open_raster.png" alt="Open the language map" width="500"/>
-  <figcaption>Open the language map in the Georeferencer</figcaption>
+  <figcaption><em>Open the language map in the Georeferencer</em>em></figcaption>
 </figure>
 
+&nbsp;
 
 ## Setting the ground control points
 
@@ -48,9 +49,10 @@ The top tile now shows the Alor Pantar map. To begin georeferencing, click the `
 
 <figure>
   <img src="images/add_point.png" alt="Add a Point" width="500"/>
-  <figcaption>Add a ground conrl point</figcaption>
+  <figcaption><em>Add a ground conrl point</em>em></figcaption>
 </figure>
 
+&nbsp;
 
 Now locate a distinct geographic feature on the language map that is also visible on the basemap. This feature will act as a ground control point (GCP) to help align the two maps. For example, you could use the tip of a coastline, as we do here. Other suitable control points might include river bends, confluences, mountain peaks, road intersections, or any other recognisable geographic feature visible on both maps. Click on the selected feature on the language map, and the **Enter Map Coordinates** window will appear.
 
@@ -59,21 +61,25 @@ Now locate a distinct geographic feature on the language map that is also visibl
   <figcaption>The <strong>Enter Map Coordinates</strong> window</figcaption>
 </figure>
 
-The window prompts you to enter the geographic coordinates of the GCP in the `X / East` and `Y / North` fields. If you happen to know the coordinates of the feature — kudos, you are a mighty geographer. Usually, though, you won't. Instead, click the `From Map Canvas` icon at the bottom of the window. You will be returned to the basemap. Locate the same feature on the basemap — in our case, the tip of the coastline — and click on it. The point you just clicked will appear as a green dot on the basemap.
+&nbsp;
 
+The window prompts you to enter the geographic coordinates of the GCP in the `X / East` and `Y / North` fields. If you happen to know the coordinates of the feature — kudos, you are a mighty geographer. Usually, though, you won't. Instead, click the `From Map Canvas` icon at the bottom of the window. You will be returned to the basemap. Locate the same feature on the basemap — in our case, the tip of the coastline — and click on it. The point you just clicked will appear as a green dot on the basemap.
 
 <figure>
   <img src="images/gcp_basemap.png" alt="The GCP on the basemap" width="800"/>
   <figcaption>The green dot marks the ground control point on the basemap.</figcaption>
 </figure>
 
-Return to the **Enter Map Coordinates** window. The coordinates of the GCP will now appear in the `X / East` and `Y / North` fields, using the coordinate reference system (CRS) of the basemap, which in our case is `EPSG:3857 (WGS 84 / Pseudo-Mercator)`.
+&nbsp;
 
+Return to the **Enter Map Coordinates** window. The coordinates of the GCP will now appear in the `X / East` and `Y / North` fields, using the coordinate reference system (CRS) of the basemap, which in our case is `EPSG:3857 (WGS 84 / Pseudo-Mercator)`.
 
 <figure>
   <img src="images/map_coordinates.png" alt="The numeric coordinates of the first GCP" width="500"/>
   <figcaption>The <strong>Enter Map Coordinates</strong> window shows the numeric coordinates of the first GCP.</figcaption>
 </figure>
+
+&nbsp;
 
 Click `OK` to add the GCP. You will be returned to the **Georeferencer** window, where the GCP appears as a red dot on the language map. Its map and image coordinates are also listed in the GCP Table.
 
@@ -82,12 +88,16 @@ Click `OK` to add the GCP. You will be returned to the **Georeferencer** window,
   <figcaption>The ground control point on the language map.</figcaption>
 </figure>
 
+&nbsp;
+
 Rinse and repeat to add more GCPs equally distributed around the map image. For this relatively simple map, around seven control points  along the coastline of the Alor and Pantar islands should be sufficient. You can always add more points later if the georeferenced map shows distortions or doesn't align properly.
 
 <figure>
   <img src="images/seven_gcps.png" alt="The numeric coordinates of the first GCP" width="500"/>
   <figcaption>Seven GCPs on the language map.</figcaption>
 </figure>
+
+&nbsp;
 
 ## Perform the georeferencing 
 
@@ -98,6 +108,7 @@ Once you have placed a sufficient number of ground control points to accurately 
   <figcaption>Open the <strong>Transformation settings</strong> window.</figcaption>
 </figure>
 
+&nbsp;
 
 A dialog window opens where you can configure the georeferincing process to properly align your map with the basemap.
 
@@ -106,6 +117,7 @@ A dialog window opens where you can configure the georeferincing process to prop
   <figcaption>The <strong>Transformation settings</strong> window.</figcaption>
 </figure>
 
+&nbsp;
 
 In the **`Transformation Parameters`** section, define the technical settings for the transformation:
 
@@ -140,12 +152,16 @@ Finally, click the **`Start Georeferencing`** icon to begin aligning the languag
   <figcaption>Start the georeferencing.</figcaption>
 </figure>
 
+&nbsp;
+
 The georeferenced map is added as a new layer. By setting the layer to transparent, you can verify that it aligns well with the basemap.
 
 <figure>
   <img src="images/georeferenced_map.png" alt="The georeferenced map" width="500"/>
   <figcaption>The georeferenced map.</figcaption>
 </figure>
+
+&nbsp;
 
 We can now proceed to digitise the language polygons from the georeferenced map. This process will be covered in the next tutorial.
 
