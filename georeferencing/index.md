@@ -18,8 +18,7 @@ Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS.
    <figcaption><em>Adding the Carto Basic map as basemap</em></figcaption>
 </figure>
 
-&nbsp; 
-&nbsp; 
+&nbsp;
 
 The **HCMGIS** plugin provides quick access to a wide range of ready-to-use basemaps, including OpenStreetMap, Google Maps, and satellite imagery. If the plugin is not already installed, you’ll need to [install it](https://mapscaping.com/hcmgis-plugin-in-qgis/).
 
@@ -30,8 +29,9 @@ Now we can use the **Georeferencer** plugin to align the Alor-Pantar map with th
 
 <figure>
   <img src="images/georeferencer.png" alt="Open the Georeferencer plugin" width="800"/>
-  <figcaption>Open the Georeferencer plugin</figcaption>
+  <figcaption><em>Open the Georeferencer plugin</em></figcaption>
 </figure>
+&nbsp;
 
 The **Georeferencer** window is divided into two main tiles. The map tile in the top shows the raster image that will be georeferenced. In this tile you'll add the ground control points (GCPs) to align the language map with the basemap. The bottom tile shows the GCP Table with all ground control points you’ve added, including their pixel locations, geographic coordinates, and an estimate of their accuracy. To add the language map to the top tile, click the `Open Raster...` icon and navigate to the location of the raster image file on your computer.
 
