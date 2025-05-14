@@ -58,7 +58,7 @@ Now locate a distinct geographic feature on the language map that is also visibl
 
 <figure>
   <img src="images/enter_coordinates.png" alt="Enter Map Coordinates" width="500"/>
-  <figcaption><em>The <strong>Enter Map Coordinates</strong> window.</em></figcaption>
+  <figcaption><em>The Enter Map Coordinates window.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -76,7 +76,7 @@ Return to the **Enter Map Coordinates** window. The coordinates of the GCP will 
 
 <figure>
   <img src="images/map_coordinates.png" alt="The numeric coordinates of the first GCP" width="500"/>
-  <figcaption>The <strong>Enter Map Coordinates</strong> window shows the numeric coordinates of the first GCP.</figcaption>
+  <figcaption><em>The Enter Map Coordinates window shows the numeric coordinates of the first GCP.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -105,7 +105,7 @@ Once you have placed a sufficient number of ground control points to accurately 
 
 <figure>
   <img src="images/transformation_settings.png" alt="Open the Transformation settings window" width="500"/>
-  <figcaption><em>Open the <strong>Transformation settings</strong> window.</em></figcaption>
+  <figcaption><em>Open the Transformation settings window.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -114,7 +114,7 @@ A dialog window opens where you can configure the georeferincing process to prop
 
 <figure>
   <img src="images/set_transformation.png" alt="The Transformation settings window" width="300"/>
-  <figcaption><em>The <strong>Transformation settings</strong> window.</em></figcaption>
+  <figcaption><em>The Transformation settings window.</em></figcaption>
 </figure>
 
 &nbsp;
