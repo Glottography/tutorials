@@ -104,7 +104,7 @@ Rinse and repeat to add more GCPs equally distributed around the map image. For 
 Once you have placed a sufficient number of ground control points to accurately anchor your language map to the real-world coordinates of the basemap, you can proceed to run the georeferencing. Click on the **`Transformation Settings`** icon in the toolbar.
 
 <figure>
-  <img src="images/transformation_settings.png" alt="Open the Transformation settings window" width="500"/>
+  <img src="images/transformation_settings.png" alt="Open the Transformation Settings window" width="500"/>
   <figcaption><em>Open the Transformation settings window.</em></figcaption>
 </figure>
 
@@ -113,8 +113,8 @@ Once you have placed a sufficient number of ground control points to accurately 
 A dialog window opens where you can configure the georeferincing process to properly align your map with the basemap.
 
 <figure>
-  <img src="images/set_transformation.png" alt="The Transformation settings window" width="300"/>
-  <figcaption><em>The Transformation settings window.</em></figcaption>
+  <img src="images/set_transformation.png" alt="The Transformation Settings window" width="300"/>
+  <figcaption><em>The Transformation Settings window.</em></figcaption>
 </figure>
 
 &nbsp;
