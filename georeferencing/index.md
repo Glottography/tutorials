@@ -15,7 +15,7 @@ Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS.
 
 <figure>
   <img src="images/hcmgis_basemap.png" alt="Adding th Carto Basic basemap in QGIS" width="800" />
-   <figcaption><em>Adding the Carto Basic map as basemap</em></figcaption>
+   <figcaption><em>Adding the Carto Basic map as basemap.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -29,7 +29,7 @@ Now we can use the **Georeferencer** plugin to align the Alor-Pantar map with th
 
 <figure>
   <img src="images/georeferencer.png" alt="Open the Georeferencer plugin" width="800"/>
-  <figcaption><em>Open the Georeferencer plugin</em></figcaption>
+  <figcaption><em>Open the Georeferencer plugin.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -38,7 +38,7 @@ The **Georeferencer** window is divided into two main tiles. The map tile in the
 
 <figure>
   <img src="images/screenshot_open_raster.png" alt="Open the language map" width="500"/>
-  <figcaption><em>Open the language map in the Georeferencer</em>em></figcaption>
+  <figcaption><em>Open the language map in the Georeferencer.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -49,7 +49,7 @@ The top tile now shows the Alor Pantar map. To begin georeferencing, click the `
 
 <figure>
   <img src="images/add_point.png" alt="Add a Point" width="500"/>
-  <figcaption><em>Add a ground conrl point</em>em></figcaption>
+  <figcaption><em>Add a ground control point.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -58,7 +58,7 @@ Now locate a distinct geographic feature on the language map that is also visibl
 
 <figure>
   <img src="images/enter_coordinates.png" alt="Enter Map Coordinates" width="500"/>
-  <figcaption>The <strong>Enter Map Coordinates</strong> window</figcaption>
+  <figcaption><em>The <strong>Enter Map Coordinates</strong> window.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -67,7 +67,7 @@ The window prompts you to enter the geographic coordinates of the GCP in the `X 
 
 <figure>
   <img src="images/gcp_basemap.png" alt="The GCP on the basemap" width="800"/>
-  <figcaption>The green dot marks the ground control point on the basemap.</figcaption>
+  <figcaption><em>The green dot marks the ground control point on the basemap.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -85,7 +85,7 @@ Click `OK` to add the GCP. You will be returned to the **Georeferencer** window,
 
 <figure>
   <img src="images/gcp1.png" alt="The GCP on the language map" width="500"/>
-  <figcaption>The ground control point on the language map.</figcaption>
+  <figcaption><em>The ground control point on the language map.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -94,7 +94,7 @@ Rinse and repeat to add more GCPs equally distributed around the map image. For 
 
 <figure>
   <img src="images/seven_gcps.png" alt="The numeric coordinates of the first GCP" width="500"/>
-  <figcaption>Seven GCPs on the language map.</figcaption>
+  <figcaption><em>Seven GCPs on the language map.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -105,7 +105,7 @@ Once you have placed a sufficient number of ground control points to accurately 
 
 <figure>
   <img src="images/transformation_settings.png" alt="Open the Transformation settings window" width="500"/>
-  <figcaption>Open the <strong>Transformation settings</strong> window.</figcaption>
+  <figcaption><em>Open the <strong>Transformation settings</strong> window.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -114,7 +114,7 @@ A dialog window opens where you can configure the georeferincing process to prop
 
 <figure>
   <img src="images/set_transformation.png" alt="The Transformation settings window" width="300"/>
-  <figcaption>The <strong>Transformation settings</strong> window.</figcaption>
+  <figcaption><em>The <strong>Transformation settings</strong> window.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -149,7 +149,7 @@ Finally, click the **`Start Georeferencing`** icon to begin aligning the languag
 
 <figure>
   <img src="images/start_georeferencing.png" alt="Start georeferencing" width="500"/>
-  <figcaption>Start the georeferencing.</figcaption>
+  <figcaption><em>Start the georeferencing.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -158,7 +158,7 @@ The georeferenced map is added as a new layer. By setting the layer to transpare
 
 <figure>
   <img src="images/georeferenced_map.png" alt="The georeferenced map" width="500"/>
-  <figcaption>The georeferenced map.</figcaption>
+  <figcaption><em>The georeferenced map.</em></figcaption>
 </figure>
 
 &nbsp;
