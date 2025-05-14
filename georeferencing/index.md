@@ -37,7 +37,7 @@ Now we can use the **Georeferencer** plugin to align the Alor-Pantar map with th
 The **Georeferencer** window is divided into two main tiles. The map tile in the top shows the raster image that will be georeferenced. In this tile you'll add the ground control points (GCPs) to align the language map with the basemap. The bottom tile shows the GCP Table with all ground control points you’ve added, including their pixel locations, geographic coordinates, and an estimate of their accuracy. To add the language map to the top tile, click the `Open Raster...` icon and navigate to the location of the raster image file on your computer.
 
 <figure>
-  <img src="images/screenshot_open_raster.png" alt="Open the language map" width="500"/>
+  <img src="images/open_raster.png" alt="Open the language map" width="500"/>
   <figcaption><em>Open the language map in the Georeferencer.</em></figcaption>
 </figure>
 
