@@ -309,7 +309,7 @@ Add a new field called `glottocode` as a Text (string) with 8 characters.
 
 &nbsp;
 
-Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, and `note`, all as Text (string) but without specifying the number of allowed characters.Once done, save your edits.
+Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, and `note`, all as Text (string) but without specifying the number of allowed characters. Once done, save your edits.
 
 <figure>
   <img src="images/save_attribute_edits.png" alt="Save edits." width="500" />
