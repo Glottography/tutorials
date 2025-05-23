@@ -109,7 +109,7 @@ To improve the accuracy of your digitising when adding polygons, you can enable 
 
 <figure>
   <img src="images/enable_snapping.png" alt="Snapping toolbar in QGIS" width="800" />
-  <figcaption><em>Snapping Toolbar with snapping enabled.</em></figcaption>
+  <figcaption><em>Snapping Toolbar with Snapping enabled.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -118,18 +118,17 @@ Set the **snapping distance**. Typically 10 pixels is a good starting point. Nex
 
 <figure>
   <img src="images/avoid_overlap_on_active_layer.png" alt="Avoid overlap on active layer" width="800" />
-  <figcaption><em>Activate avoid overlap on active layer.</em></figcaption>
+  <figcaption><em>Activate Avoid Overlap on Active Layer.</em></figcaption>
 </figure>
 
 &nbsp;
 
-Digitising now works as before, but with one key difference: QGIS will automatically snap new vertices to nearby existing ones, helping you maintain clean, topologically correct boundaries.
+Digitising now works as before, but with one key difference: QGIS will automatically snap new vertices to nearby existing ones when in snapping distance, helping you maintain clean, topologically correct boundaries.
 
 
 ## Cutting enclave language polygons
 
-In some cases, a language area may be completely surrounded by another.  An example is _Pennsylvania Dutch_ in the USA, entirely enclosed by English-speaking regions.  For such a language enclave, we first cut a hole in the surrounding language area and then fill that hole with a new polygon representing the enclave language. This approach is suited for very specific cases and may not be commonly needed.  
-However, in situations where an isolated language enclave exists, it is often the only viable method. While there is no such enclave on the Alor-Pantar language map, we will briefly walk through the steps required to create one. Click the **Toggle Editing** icon to start editing.  Ensure the **Advanced Digitizing Toolbar** is active.  If not, go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. In the **Advanced Digitizing Toolbar**, click the **Fill Ring** icon.
+In some cases, a language area may be completely surrounded by another.  An example is _Pennsylvania Dutch_ in the USA, entirely enclosed by English-speaking regions.  For such a language enclave, we first cut a hole in the surrounding language area and then fill that hole with a new polygon representing the enclave language. This approach is suited for very specific cases and may not be commonly needed. However, in situations where an isolated language enclave exists, it is often the only viable method. While there is no such enclave on the Alor-Pantar language map, we will briefly walk through the steps required to create one. Click the **Toggle Editing** icon to start editing.  Ensure the **Advanced Digitizing Toolbar** is active.  If not, go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. In the **Advanced Digitizing Toolbar**, click the **Fill Ring** icon.
 
 <figure>
   <img src="images/fill_ring_tool.png" alt="Activate the fill ring tool" width="800" />
@@ -151,7 +150,7 @@ You can now select the filled ring to verify that the tool created a new polygon
 
 <figure>
   <img src="images/select_filled_ring.png" alt="The filled ring." width="800" />
-  <figcaption><em>We cut a ring into the Abui language and filled it.</em></figcaption>
+  <figcaption><em>We cut a ring into a language polygon and filled it. While this may not make much sense on this map, it helps us create polygons for language enclaves.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -159,8 +158,7 @@ You can now select the filled ring to verify that the tool created a new polygon
 
 # Splitting language polygons from existing landforms
 
-This method splits language areas from an existing polygon dataset of continents and landforms. We use the **Land polygons including major islands** from the [1:10m Physical Vectors by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/).  
-The Natural Earth land polygons are available as shapefiles, a legacy standard for storing geographic vector data. To load the shapefile in QGIS, go to **Layer** > **Add Layer** > **Add Vector Layer...**, browse to the location of the Natural Earth land polygon shapefile, and click **Add**. Alternatively, you can simply drag and drop the shapefile into the **Layers** panel in QGIS. 
+This method splits language areas from an existing polygon dataset of continents and landforms. We use the **Land polygons including major islands** from the [1:10m Physical Vectors by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/).  The Natural Earth land polygons are available as shapefiles, a legacy standard for storing geographic vector data. To load the shapefile in QGIS, go to **Layer** > **Add Layer** > **Add Vector Layer...**, browse to the file location of the Natural Earth land polygon shapefile, and click **Add**. Alternatively, you can simply drag and drop the shapefile into the **Layers** panel in QGIS. 
 
 <figure>
   <img src="images/natural_earth_land_polygons.png" alt="The Natural Earth Land Polygons" width="800" />
@@ -169,7 +167,7 @@ The Natural Earth land polygons are available as shapefiles, a legacy standard f
 
 &nbsp;
 
-We can already see that the Natural Earth land polygons are not detailed enough for this region — they are missing the Pulau Pura and Treweng islands. While we likely wouldn’t use this dataset for digitising this language map, we will carry on for the sake of demonstrating how to cut language polygons.
+We can already see that the Natural Earth land polygons are not detailed enough for this region — they are missing the Pura and Treweng islands. While we likely wouldn’t use this dataset for digitising this language map, we will carry on for the sake of demonstrating how to cut language polygons.
 
 ## Preparing the Base Layer for Digitising
 
