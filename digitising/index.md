@@ -19,8 +19,8 @@ We also open the **Carto Basic** basemap from the **HCMGIS** plugin as a spatial
 Next, we create an empty polygon vector layer to store the digitised language areas. To do this, go to **Layer** > **Create Layer** > **New GeoPackage Layer...** to initialise a new **GeoPackage** file.  **GeoPackage (.gpkg)** is a file format for storing geographic features and has become the de facto standard in QGIS. The file will act as a container for the language polygons we are about to digitise.
 
 <figure>
-  <img src="images/new_geopackage_layer.png" alt="Creating a new Geopackage layer." width="800" />
-  <figcaption><em>Creating a new Geopackage layer.</em></figcaption>
+  <img src="images/new_geopackage_layer.png" alt="Creating a new GeoPackage layer." width="800" />
+  <figcaption><em>Creating a new GeoPackage layer.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -34,7 +34,7 @@ A dialog appears, prompting you to define the properties of the GeoPackage, incl
 
 &nbsp;
 
-In the dialog box, click the `...` button next to **Database** to choose a location and file name for the output `.gpkg` file. Under **Layer name**, enter a name for the polygon layer. This name will appear in the QGIS **Layers** panel. Set the **Geometry type** to `Polygon`. Choose a **Coordinate Reference System (CRS)** for the layer. Here, we use the standard `EPSG:4326 - WGS 84`, though other CRS may be more appropriate depending on the region you want to digitise.  
+In the dialog box, click the `...` button next to **Database** to choose a location and file name for the output GeoPackage file. Under **Layer name**, enter a name for the polygon layer. This name will appear in the QGIS **Layers** panel. Set the **Geometry type** to `Polygon`. Choose a **Coordinate Reference System (CRS)** for the layer. Here, we use the standard `EPSG:4326 - WGS 84`, though other CRS may be more appropriate depending on the region you want to digitise.  
 
 Next, define the **attribute fields** to store information about each polygon. In the **New Field** section, add the following fields:
 
