@@ -400,4 +400,4 @@ A form will open where you can enter the relevant attribute data for the Kiraman
 
 &nbsp;
 
-Click **Save** when done. Repeat the process until all language polygons are split from the Natural Earth land polygons.
+Click **OK** when done. Repeat the process until all language polygons are split from the Natural Earth land polygons.
