@@ -150,7 +150,7 @@ You can now select the filled ring to verify that the tool created a new polygon
 
 <figure>
   <img src="images/select_filled_ring.png" alt="The filled ring." width="800" />
-  <figcaption><em>We cut a ring into a language polygon and filled it. While this may not make much sense on this map, it helps us create polygons for language enclaves.</em></figcaption>
+  <figcaption><em>We cut a ring into a language polygon and filled it. While this may not make much sense on this map, it helps us create polygons for maps with language enclaves.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -171,12 +171,14 @@ We can already see that the Natural Earth land polygons are not detailed enough 
 
 ## Preparing the Base Layer for Digitising
 
-The Natural Earth land polygons will serve as the base from which we cut out the digitised language areas. Before we begin digitising, we need to prepare this vector layer for the task. Shapefiles are a clunky, legacy format that store geometry and attribute data across separate files. To streamline our workflow, we convert the layer to a **GeoPackage**. Right-click the layer in the **Layers** panel and go to **Export** > **Save Features As...**.
+The Natural Earth land polygons will serve as the base from which we cut out the digitised language areas. We need to prepare this vector layer first. Shapefiles are a clunky, legacy format that store geometry and attribute data across separate files. To streamline our workflow, we convert the layer to a **GeoPackage**. Right-click the layer in the **Layers** panel and go to **Export** > **Save Features As...**.
 
 <figure>
   <img src="images/save_feature_as.png" alt="Export the Natural Earth Land Polygons" width="800" />
   <figcaption><em>Export the Natural Earth Land Polygons.</em></figcaption>
 </figure>
+
+&nbsp;
 
 A dialog appears. Set the **Format** to `GeoPackage`, and specify the **File name** and location for the output file. You can leave the other settings as they are.
 
@@ -185,12 +187,18 @@ A dialog appears. Set the **Format** to `GeoPackage`, and specify the **File nam
   <figcaption><em>Save the Natural Earth Land Polygons as GeoPackage.</em></figcaption>
 </figure>
 
-The Natural Earth polygons are stored as large **Multipolygons**, each containing potentially hundreds of individual polygons. Before digitising, we need to separate these into their individual components using the **Multipart to Singleparts** tool. Go to **Processing Toolbox** > **Vector geometry** > **Multipart to Singleparts...**.
+&nbsp;
+
+### Multipolygons to single parts
+
+The Natural Earth polygons are stored as large **Multipolygons**, each containing potentially hundreds of single polygons. Before digitising, we need to separate these into their individual components using the **Multipart to Singleparts** tool. Go to **Processing Toolbox** > **Vector geometry** > **Multipart to Singleparts...**.
 
 <figure>
   <img src="images/multipart_to_single_part.png" alt="Open the Multipart to Singleparts tool" width="800" />
   <figcaption><em>Open the Multipart to Singleparts tool.</em></figcaption>
 </figure>
+
+&nbsp;
 
 In the dialog, set the **Input layer** to the Natural Earth land polygons and define the file name and location for the single parts. Again, use the **GeoPackage** format.
 
@@ -199,6 +207,8 @@ In the dialog, set the **Input layer** to the Natural Earth land polygons and de
   <figcaption><em>The Multipart to Singleparts tool.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Click **Run**. This will generate a new layer where each polygon becomes a separate feature.
 
 ### Cropping to the Language Map Region
@@ -206,9 +216,11 @@ Click **Run**. This will generate a new layer where each polygon becomes a separ
 Next, we crop the single-part land polygons to the region covered by our language map. Click the **Select Features by Polygon** icon in the toolbar.
 
 <figure>
-  <img src="images/select_features_by_polygon.png" alt="Activate features by polygon" width="800" />
+  <img src="images/select_features_by_polygon.png" alt="Activate Select Features by Polygon" width="800" />
   <figcaption><em>Activate Select Features by Polygon.</em></figcaption>
 </figure>
+
+&nbsp;
 
 Draw a polygon around the area of interest to select all overlapping land polygons.
 
@@ -217,7 +229,9 @@ Draw a polygon around the area of interest to select all overlapping land polygo
   <figcaption><em>Select the land polygons overlapping the language map.</em></figcaption>
 </figure>
 
-Once the features are selected, export them as a new layer.  Right-click the layer and go to **Export** > **Save Selected Features As...**.
+&nbsp;
+
+Export the selected features as a new layer.  Right-click the layer and go to **Export** > **Save Selected Features As...**.
 This will isolate only the polygons within your region of interest
 
 <figure>
@@ -225,12 +239,16 @@ This will isolate only the polygons within your region of interest
   <figcaption><em>Export the selected land polygons.</em></figcaption>
 </figure>
 
+&nbsp;
+
 In the dialog, save the selected features as a **GeoPackage**. Use the name of the language map as the file name and rename the `fid` column to `id` to match Glottography requirements.
 
 <figure>
   <img src="images/save_selected_features_dialog.png" alt="Save selected features." width="500" />
   <figcaption><em>Save the selected land polygons as GeoPackage.</em></figcaption>
 </figure>
+
+&nbsp;
 
 We have now cropped the Natural Earth polygons to only those overlapping with the language map.
 
@@ -244,6 +262,8 @@ Next, we prepare the attribute table by removing irrelevant fields and adding th
   <figcaption><em>Open the Attribute Table of the cropped land polygons.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Click the **Toggle Editing** icon to enable edits.
 
 <figure>
@@ -251,12 +271,16 @@ Click the **Toggle Editing** icon to enable edits.
   <figcaption><em>Start editing the attributes.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Click the **Delete Field** icon to remove irreleavant attributes.
 
 <figure>
   <img src="images/delete_field.png" alt="Delete field." width="500" />
   <figcaption><em>Delete fields.</em></figcaption>
 </figure>
+
+&nbsp;
 
 In the dialog, mark all fields for deletion except for `id`, and click OK.
 
@@ -272,6 +296,8 @@ With irrelevant fields removed, begin adding the required attributes by clicking
   <figcaption><em>Adding new attribute fields.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Add a new field called `glottocode` as a Text (string) with 8 characters.
 
 <figure>
@@ -279,12 +305,16 @@ Add a new field called `glottocode` as a Text (string) with 8 characters.
   <figcaption><em>Adding a new field for glottocodes.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Repeat the process to add the remaining fields: `name`, `full_map_name`, `year`, and `note`.  Once done, save your edits.
 
 <figure>
   <img src="images/save_attribute_edits.png" alt="Save edits." width="500" />
   <figcaption><em>Saving the added attributes.</em></figcaption>
 </figure>
+
+&nbsp;
 
 Your layer is now ready for splitting off language areas.
 
@@ -298,12 +328,16 @@ To better see the map beneath, adjust the visual appearance of the cropped layer
   <figcaption><em>Opening the properties.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Navigate to the **Symbology** tab and change the style to a polygon with a visible outline and no fill.
 
 <figure>
   <img src="images/change_symbology.png" alt="Change the layer symbology" width="500" />
   <figcaption><em>Change the layer symbology.</em></figcaption>
 </figure>
+
+&nbsp;
 
 Now we begin digitising. Click the **Toggle Editing** icon to start editing.
 
@@ -312,6 +346,8 @@ Now we begin digitising. Click the **Toggle Editing** icon to start editing.
   <figcaption><em>Start editing.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. Click the **Split Features** tool and begin tracing the boundary of the language polygon.
 
 <figure>
@@ -319,12 +355,16 @@ Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **
   <figcaption><em>Activate the split features tool.</em></figcaption>
 </figure>
 
+&nbsp;
+
 To trace the Kiraman language area, start in the ocean southwest of the landmass, cut across the polygon boundary, trace the language area northeastwards, then east and south, cutting back across the polygon boundary. Finish the shape with a right-click.  Tip: Disable [snapping](#snapping) by clicking the magnet icon. Snapping is helpful in other digitising tasks but can hinder working with the **Split Features** tool.
 
 <figure>
   <img src="images/split_features.png" alt="Start editing" width="800" />
   <figcaption><em>Splitting the Kiraman language area off the Natural Earth polygon of Alor island.</em></figcaption>
 </figure>
+
+&nbsp;
 
 If you receive the error message:  **"No features were split: If there are selected features, the split tool only applies to those..."**,   this usually means the wrong feature was selected.  Click **Deselect Features from All Layers** to fix the issue.
 
@@ -338,6 +378,8 @@ After tracing a language polygon, fill in the attribute fields.  Use the **Ident
   <figcaption><em>Activate the Identify Feature tool.</em></figcaption>
 </figure>
 
+&nbsp;
+
 In the **Identify Results** panel, click **Edit Feature Form**.
 
 <figure>
@@ -345,11 +387,15 @@ In the **Identify Results** panel, click **Edit Feature Form**.
   <figcaption><em>Activate the Edit Feature dialog.</em></figcaption>
 </figure>
 
+&nbsp;
+
 A dialog will open where you can enter the relevant attribute data for the Kiraman language area.
 
 <figure>
   <img src="images/fill_in_feature_attributes.png" alt="Fill in attributes" width="500" />
   <figcaption><em>Fill in the feature attributes for the Kiraman language area.</em></figcaption>
 </figure>
+
+&nbsp;
 
 Click **Save** when done. Repeat the process until all language polygons are split from the Natural Earth land polygons.
