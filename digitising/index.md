@@ -1,6 +1,6 @@
  # Digitising language polygons in QGIS
 
-Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/intro.md). We will explore different approaches to digitising language polygons from a language map.
+Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). We will explore different approaches to digitising language polygons from a language map.
 
 ### A: [Digitising Language Polygons fom scratch](#digitising-language-polygons-from-scratch)
 This method involves manually drawing polygons one by one. It is quick and straightforward but can introduce geometric and topological inconsistencies, particularly where the language map does not align well with coastlines or landforms. This issue is more likely to occur with maps that have coarse spatial resolution or inaccurate georeferencing. Conversely, digitising from scratch is best suited to inland regions, where coastal accuracy is less important, or to high-resolution maps that have been accurately georeferenced.
