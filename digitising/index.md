@@ -1,6 +1,6 @@
  # Digitising language polygons in QGIS
 
-Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). We will explore different approaches to digitising language polygons from a language map.
+Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). We will explore two different approaches to digitising language polygons from a language map.
 
 ### A: [Digitising Language Polygons fom scratch](#digitising-language-polygons-from-scratch)
 This method involves manually drawing polygons one by one. It is quick and straightforward but can introduce geometric and topological inconsistencies, particularly where the language map does not align well with coastlines or landforms. This issue is more likely to occur with maps that have coarse spatial resolution or inaccurate georeferencing. Conversely, digitising from scratch is best suited to inland regions, where coastal accuracy is less important, or to high-resolution maps that have been accurately georeferenced.
@@ -28,7 +28,7 @@ Next, we create an empty polygon vector layer to store the digitised language ar
 A dialog appears, prompting you to define the properties of the GeoPackage, including the geometry type (point, line, or polygon), the coordinate reference system (CRS), and the (non-spatial) attributes.
 
 <figure>
-  <img src="images/new_gpkg_layer_dialog.png" alt="The GeoPackage dialog." width="300" />
+  <img src="images/new_gpkg_layer_dialog.png" alt="The GeoPackage dialog." width="500" />
   <figcaption><em>The GeoPackage dialog.</em></figcaption>
 </figure>
 
@@ -225,7 +225,7 @@ Next, we crop the single-part land polygons to the region covered by our languag
 Draw a polygon around the area of interest to select all overlapping land polygons.
 
 <figure>
-  <img src="images/select_features_by_polygon_process.png" alt="Select the land polygons" width="500" />
+  <img src="images/select_features_by_polygon_process.png" alt="Select the land polygons" width="800" />
   <figcaption><em>Select the land polygons overlapping the language map.</em></figcaption>
 </figure>
 
@@ -289,6 +289,8 @@ In the dialog, mark all fields for deletion except for `id`, and click OK.
   <figcaption><em>The delete fields dialog.</em></figcaption>
 </figure>
 
+&nbsp;
+
 With irrelevant fields removed, begin adding the required attributes by clicking the **New Field** icon.
 
 <figure>
@@ -307,7 +309,7 @@ Add a new field called `glottocode` as a Text (string) with 8 characters.
 
 &nbsp;
 
-Repeat the process to add the remaining fields: `name`, `full_map_name`, `year`, and `note`.  Once done, save your edits.
+Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, and `note`, all as Text (string) but without specifying the number of allowed characters.Once done, save your edits.
 
 <figure>
   <img src="images/save_attribute_edits.png" alt="Save edits." width="500" />
