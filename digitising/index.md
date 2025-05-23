@@ -12,7 +12,7 @@ This method involves splitting language areas from an existing polygon dataset o
 
 # Digitising language polygons from scratch
 
-Before digitising, we need to load the **georeferenced raster map** of the Alor Pantar languages we created in the [Georeferencing tutorial](...georeferencing/index.md). Go to **Layer** > **Add Layer** > **Add Raster Layer...** and locate the file, or drag and drop the file into the **Layers** panel.
+Before digitising, we need to load the **georeferenced raster map** of the Alor Pantar languages we created in the [Georeferencing tutorial](../georeferencing/index.md). Go to **Layer** > **Add Layer** > **Add Raster Layer...** and locate the file, or drag and drop the file into the **Layers** panel.
 
 We also open the **Carto Basic** basemap from the **HCMGIS** plugin as a spatial reference:  **HCMGIS** > **Basemaps** > **Vector tiles** > **Carto Basic**.
 
