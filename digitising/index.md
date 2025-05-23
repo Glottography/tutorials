@@ -300,7 +300,7 @@ With irrelevant fields removed, begin adding the required attributes by clicking
 
 &nbsp;
 
-Add a new field called `glottocode` as a Text (string) with 8 characters.
+Add a new field called `glottocode` as a Text (string) with 8 characters, since Glottocodes always have exactly 8 characters.
 
 <figure>
   <img src="images/add_glottocode_field.png" alt="Add field for glottocode." width="300" />
@@ -309,7 +309,7 @@ Add a new field called `glottocode` as a Text (string) with 8 characters.
 
 &nbsp;
 
-Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, and `note`, all as Text (string) but without specifying the number of allowed characters. Once done, save your edits.
+Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, and `note`, all as Text (string). We do not specify a length here, as we usually do not know the maximum length, for example the length of a language name. Once done, save your edits.
 
 <figure>
   <img src="images/save_attribute_edits.png" alt="Save edits." width="500" />
@@ -350,11 +350,11 @@ Now we begin digitising. Click the **Toggle Editing** icon to start editing.
 
 &nbsp;
 
-Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. Click the **Split Features** tool and begin tracing the boundary of the language polygon.
+Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. Then click the **Split Features** tool and begin tracing the boundary of the language polygon.
 
 <figure>
-  <img src="images/split_features_icon.png" alt="Split features" width="800" />
-  <figcaption><em>Activate the split features tool.</em></figcaption>
+  <img src="images/split_features_icon.png" alt="Activete the split features tool" width="800" />
+  <figcaption><em>Activate the Split Features tool.</em></figcaption>
 </figure>
 
 &nbsp;
@@ -362,7 +362,7 @@ Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **
 To trace the Kiraman language area, start in the ocean southwest of the landmass, cut across the polygon boundary, trace the language area northeastwards, then east and south, cutting back across the polygon boundary. Finish the shape with a right-click.  Tip: Disable [snapping](#snapping) by clicking the magnet icon. Snapping is helpful in other digitising tasks but can hinder working with the **Split Features** tool.
 
 <figure>
-  <img src="images/split_features.png" alt="Start editing" width="800" />
+  <img src="images/split_features.png" alt="Splitting features" width="800" />
   <figcaption><em>Splitting the Kiraman language area off the Natural Earth polygon of Alor island.</em></figcaption>
 </figure>
 
@@ -385,13 +385,13 @@ After tracing a language polygon, fill in the attribute fields.  Use the **Ident
 In the **Identify Results** panel, click **Edit Feature Form**.
 
 <figure>
-  <img src="images/edit_feature_form.png" alt="Edit feature" width="800" />
-  <figcaption><em>Activate the Edit Feature dialog.</em></figcaption>
+  <img src="images/edit_feature_form.png" alt="Activate the edit feature form" width="800" />
+  <figcaption><em>Activate the Edit Feature form.</em></figcaption>
 </figure>
 
 &nbsp;
 
-A dialog will open where you can enter the relevant attribute data for the Kiraman language area.
+A form will open where you can enter the relevant attribute data for the Kiraman language area.
 
 <figure>
   <img src="images/fill_in_feature_attributes.png" alt="Fill in attributes" width="500" />
