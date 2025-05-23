@@ -1,20 +1,20 @@
  # Digitising language polygons in QGIS
 
-Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map (Schapper, 2020), which we georeferenced in the [Georeferencing tutorial](georeferencing/intro.md). We will explore different approaches to digitising language polygons from a language map.
+Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/intro.md). We will explore different approaches to digitising language polygons from a language map.
 
 ### A: [Digitising Language Polygons fom scratch](#digitising-language-polygons-from-scratch)
-This method involves manually drawing polygons one by one. It is quick and straightforward but can introduce geometric inconsistencies, particularly where the language map does not align well with coastlines or landforms. This issue is more likely to occur with maps that have coarse spatial resolution or inaccurate georeferencing. Conversely, digitising from scratch is best suited to inland regions, where coastal accuracy is less important, or to high-resolution maps that have been accurately georeferenced.
+This method involves manually drawing polygons one by one. It is quick and straightforward but can introduce geometric and topological inconsistencies, particularly where the language map does not align well with coastlines or landforms. This issue is more likely to occur with maps that have coarse spatial resolution or inaccurate georeferencing. Conversely, digitising from scratch is best suited to inland regions, where coastal accuracy is less important, or to high-resolution maps that have been accurately georeferenced.
 
 ### B: [Splitting language polygons from existing landforms](#splitting-language-polygons-from-existing-landforms)
 This method involves splitting language areas from an existing polygon dataset of continents and landforms. The resulting language polygons follow coastlines and land boundaries derived from high-resolution satellite imagery, which are often more accurate than those shown on a scanned or georeferenced map. However, a key limitation is that the language polygons are constrained by the boundaries of the existing dataset, which may omit small or irregular geographic features, such as islands or narrow coastal strips.
+
+---
 
 # Digitising language polygons from scratch
 
 Before digitising, we need to load the **georeferenced raster map** of the Alor Pantar languages we created in the [Georeferencing tutorial](georeferencing/intro.md). Go to **Layer** > **Add Layer** > **Add Raster Layer...** and locate the file, or drag and drop the file into the **Layers** panel.
 
 We also open the **Carto Basic** basemap from the **HCMGIS** plugin as a spatial reference:  **HCMGIS** > **Basemaps** > **Vector tiles** > **Carto Basic**.
-
----
 
 Next, we create an empty polygon vector layer to store the digitised language areas. To do this, go to **Layer** > **Create Layer** > **New GeoPackage Layer...** to initialise a new **GeoPackage** file.  **GeoPackage (.gpkg)** is a file format for storing geographic features and has become the de facto standard in QGIS. The file will act as a container for the language polygons we are about to digitise.
 
@@ -28,8 +28,8 @@ Next, we create an empty polygon vector layer to store the digitised language ar
 A dialog appears, prompting you to define the properties of the GeoPackage, including the geometry type (point, line, or polygon), the coordinate reference system (CRS), and the (non-spatial) attributes.
 
 <figure>
-  <img src="images/new_gpkg_layer_dialog.png" alt="GeoPackage dialog in QGIS." width="300" />
-  <figcaption><em>Creating a new GeoPackage layer.</em></figcaption>
+  <img src="images/new_gpkg_layer_dialog.png" alt="The GeoPackage dialog." width="300" />
+  <figcaption><em>The GeoPackage dialog.</em></figcaption>
 </figure>
 
 &nbsp;
