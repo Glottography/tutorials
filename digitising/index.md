@@ -34,9 +34,7 @@ A dialog appears, prompting you to define the properties of the GeoPackage, incl
 
 &nbsp;
 
-In the dialog box, click the `...` button next to **Database** to choose a location and file name for the output GeoPackage file. Under **Layer name**, enter a name for the polygon layer. This name will appear in the QGIS **Layers** panel. Set the **Geometry type** to `Polygon`. Choose a **Coordinate Reference System (CRS)** for the layer. Here, we use the standard `EPSG:4326 - WGS 84`, though other CRS may be more appropriate depending on the region you want to digitise.  
-
-Next, define the **attribute fields** to store information about each polygon. In the **New Field** section, add the following fields:
+In the dialog box, click the `...` button next to **Database** to choose a location and file name for the output GeoPackage file. Under **Layer name**, enter a name for the polygon layer. This name will appear in the QGIS **Layers** panel. Set the **Geometry type** to `Polygon`. Choose a **Coordinate Reference System (CRS)** for the layer. Here, we use the standard `EPSG:4326 - WGS 84`, though other CRS may be more appropriate depending on the region you want to digitise. Next, define the **attribute fields** to store information about each polygon. In the **New Field** section, add the following fields:
 
 | Field Name      | Type          |
 |-----------------|---------------|
@@ -46,15 +44,11 @@ Next, define the **attribute fields** to store information about each polygon. I
 | `glottocode`    | Text (string) |
 | `note`          | Text (string) |
 
-For a detailed explanation of all attributes needed for Glottography polygons, see the [Metadata tutorial](metadata/intro.md).
-
-In the **Advanced** section, change the name of the **Feature id column** to `id`. Once all fields are defined, click **OK** to create the GeoPackage layer.
-
-
+For a detailed explanation of all attributes needed for Glottography polygons, see the [Metadata tutorial](../metadata/index.md). In the **Advanced** section, change the name of the **Feature id column** to `id`. Once all fields are defined, click **OK** to create the GeoPackage layer.
 
 ## Start Digitising
 
-Once your vector layer is created, ensure it is selected in the **Layers** panel. Enable **Edit Mode** by clicking the **pencil icon** in the toolbar, or right-click the layer and select **Toggle Editing**.
+Ensure that your new GeoPackage layer is selected in the **Layers** panel. Enable **Edit Mode** by clicking the **pencil icon** in the toolbar, or right-click the layer and select **Toggle Editing**.
 
 <figure>
   <img src="images/toggle_editing.png" alt="Toggle Editing." width="800" />
@@ -66,11 +60,13 @@ Once your vector layer is created, ensure it is selected in the **Layers** panel
 The icons in the **Digitizing Toolbar** should now become active. Click the **Add Polygon Feature** tool.
 
 <figure>
-  <img src="images/add_polygon_feature.png" alt="Add Polygon Feature" width="800" />
-  <figcaption><em>Add Polygon Feature.</em></figcaption>
+  <img src="images/add_polygon_feature.png" alt="Activate the Add Polygon Feature" width="800" />
+  <figcaption><em>Activate the Add Polygon Feature.</em></figcaption>
 </figure>
 
-To create a language polygon, click on the map to trace the language area, placing one vertex at a time.
+&nbsp;
+
+To create a language polygon, click on the map to trace the language area, placing one vertex at a time. Right-click to finish and close the polygon.
 
 <figure>
   <img src="images/digitising.png" alt="Digitising a language area" width="800" />
@@ -79,7 +75,7 @@ To create a language polygon, click on the map to trace the language area, placi
 
 &nbsp;
 
-Right-click to finish and close the polygon. This will open a dialog box where you can enter attribute values for the feature you just created. For example, here we enter information for the **Wersing** language, including its name, Glottocode, map name and year.
+Right-clicking will also open a dialog box where you can enter attribute values for the feature you just created. For example, here we enter information for the *Wersing* language, including its name, Glottocode, map name and year. Notice how the ID is automatically generated (Autogenerate), ensuring no duplicates
 
 <figure>
   <img src="images/add_attributes.png" alt="Adding attributes" width="500" />
@@ -97,7 +93,8 @@ To save your edits, click the **Save Layer Edits** button (disk icon), or toggle
 
 &nbsp;
 
-Don’t forget to save your QGIS project regularly by going to **Project** > **Save As...** to ensure that all your settings, layers, and views are preserved for future use. Now all you have to do is repeat the process to trace the remaining language areas on the map. Here is the final digitised map.
+Don’t forget to save your QGIS project regularly by going to **Project** > **Save As...** to ensure that all your settings, layers, and views are preserved for future use. Now all you have to do is repeat the process to trace the remaining language areas on the map. The final digitised map should look something like this.
+
 <figure>
   <img src="images/digitising_ready.png" alt="Digitised language map" width="800" />
   <figcaption><em>The digitised language map.</em></figcaption>
