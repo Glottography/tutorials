@@ -68,7 +68,7 @@ The table below shows example metadata records for selected language areas from 
 | 10 | Kiraman     | Map 3          | 2020 | kira1248   |      |
 
 
-## Exporting the attribute data as CSV
+### Exporting the attribute data as CSV
 
 Glottography expects attribute data to be exported to a separate CSV file, where each row corresponds to a digitised language area and is linked to the polygon geometry via a unique identifier (`id`). Keeping metadata in plain-text CSV format makes it easy to update and manage. It is both human-readable and compatible with version control tools like Git. The GeoPackage file can easily be exported as a CSV in QGIS. The following steps assume that QGIS is open and that all language areas and their polygons have been recorded and saved in a **GeoPackage**, following the [digitising language areas](../digitising/index.md) tutorial.
 
