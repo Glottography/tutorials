@@ -1,7 +1,7 @@
 # Finding Glottocodes
 
 In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  
-We georeferenced the map in the [Georeferencing tutorial](georeferencing/intro.md), digitised the language areas in the [Digitising tutorial](digitising/intro.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](metadata/intro.md). 
+We georeferenced the map in the [Georeferencing tutorial](../georeferencing/intro.md), digitised the language areas in the [Digitising tutorial](digitising/intro.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](../metadata/intro.md). 
 
 Glottocodes are unique identifiers for languages, dialects, and language families, maintained by [Glottolog](https://glottolog.org).  
 The simplest way to find a Glottocode is to look it up manually:
@@ -46,7 +46,7 @@ The first time you call `llm.guess_glottocode` with Gemini or Anthropic, the pac
 
 ## Load the data
 
-First, we load the [Alor-Pantar GeoPackage file](github.com/Glottography/tutorials/tree/main/glottocodes/data) using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
+First, we load the [Alor-Pantar GeoPackage file](/data) using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
 
 
 ```python
@@ -55,7 +55,7 @@ path = "data/schapper2020papuan_raw.gpkg"
 polygons = gpd.read_file(path)
 ```
 
-We can quickly inspect the GeoDataFrame by displaying the first 10 entries, confirming that it includes a geometry and all attributes and metadata recorded in the [Attributes and Metadata tutorial](metadata/intro.md), except for the Glottocode, which we will add here.
+We can quickly inspect the GeoDataFrame by displaying the first 10 entries, confirming that it includes a geometry and all attributes and metadata recorded in the [Attributes and Metadata tutorial](../metadata/intro.md), except for the Glottocode, which we will add here.
 
 ```python
 print(polygons.head(10))
