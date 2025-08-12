@@ -46,7 +46,7 @@ The first time you call `llm.guess_glottocode` with Gemini or Anthropic, the pac
 
 ## Load the data
 
-First, we load the [Alor-Pantar GeoPackage file](../data) using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
+First, we load the [Alor-Pantar GeoPackage file](data) using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
 
 
 ```python
