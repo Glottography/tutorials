@@ -1,7 +1,7 @@
 # Finding Glottocodes
 
 In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  
-We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](../metadata/index.md). 
+We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the tutorial on [Attributes and Metadata](../metadata/index.md). 
 
 Glottocodes are unique identifiers for languages, dialects, and language families, maintained by [Glottolog](https://glottolog.org).  
 The simplest way to find a Glottocode is to look it up manually:
