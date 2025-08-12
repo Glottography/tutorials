@@ -1,4 +1,4 @@
-# Handling Metadata
+# Attributes and Metadata
 
 This tutorial introduces the metadata and attributes required when digitising Glottography language areas from source publications. Glottography uses BibTeX entries to uniquely reference each source publication, and Glottocodes to identify the languages depicted in their maps. Because Glottocodes were introduced only relatively recently, many source publications -- especially older ones -- likely do not include them. As a result, assigning the correct Glottocodes to a language area can be time-consuming and may require additional effort. To assist with this process, a separate [Glottocode tutorial](../glottocodes/index.md)  explains how to automatically query and assign Glottocodes to a language area based on language name and geographic location.
 
@@ -93,4 +93,5 @@ In the dialog that appears configure the export settings. Set **Format** to `Com
 </figure>
 
 &nbsp;
+
 
