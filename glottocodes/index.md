@@ -86,7 +86,6 @@ print(polygons.head(10))
     9  MULTIPOLYGON (((124.8879 -8.16338, 124.8897 -8...  
 
 
-
 ## Finding a Suitable Glottocode Using an LLM
 
 While large language models (LLMs) can sometimes guess a language's Glottocode from its name, this approach is unreliable. LLMs may hallucinate nonexistent codes or confuse languages with similar names.  A more reliable approach is to 
