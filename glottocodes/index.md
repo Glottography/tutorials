@@ -127,15 +127,11 @@ The helper function `verify_per_row` below iterates over all rows in the GeoData
 from guess_glottocode.utils import verify_glottocode_guess
 
 def verify_per_row(row):
-    if row['unverified_glottocode']:
-        return row.unverified_glottocode if (
-                verify_glottocode_guess(row['name'],
-                                        row['unverified_glottocode'])) else None
-    else: return None
-
+    return row.unverified_glottocode if (
+            verify_glottocode_guess(row['name'],
+                                    row['unverified_glottocode'])) else None
 
 polygons['glottocode'] = polygons.apply(verify_per_row, axis=1)
-
 ```
 
 After verifying the Glottocodes, we can display the results for each language to see which have confirmed matches.
