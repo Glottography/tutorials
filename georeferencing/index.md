@@ -1,14 +1,18 @@
 # Georeferencing language maps in QGIS
 
-This tutorial walks you through the process of georeferencing a language map provided as a raster image in QGIS. Georeferencing assigns geographic coordinates to the map, enabling it to be accurately located and displayed in a geographic information system (GIS).
-QGIS is a free, open-source GIS platform available for download [here](https://qgis.org).
+This tutorial walks you through the process of georeferencing a language map provided as a raster image. Georeferencing assigns geographic coordinates to the map, enabling it to be accurately located and displayed in a geographic information system (GIS).
 
-We will georeference a map of the Alor-Pantar languages in Indonesia from the article *"Introduction to The Papuan Languages of Timor, Alor and Pantar"* by Schapper (2020). The map is available as a raster image in jpg-format.
+
+## Requirements 
+**Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
+
+**Data**: A map in raster image format (e.g., JPG, TIFF, or PNG). In this tutorial, we will georeference a map of the Alor-Pantar languages in Indonesia from Schapper (2020), *Introduction to the Papuan Languages of Timor, Alor, and Pantar*. The map is available as a JPG raster image [here](in/map3papuan.jpg).
 
 <figure>
   <img src="images/map3papuan.jpg" alt="Map of the Alor Pantar languages" width="500"/>
   <figcaption><em>Map of the Alor Pantar languages from Schapper (2020)</em></figcaption>
 </figure>
+
 
 ## Adding a basemap
 Before we can georeference the Alor-Pantar map, we first open a basemap in QGIS. The basemap serves as a reference for accurately aligning the language map. To do this, go to `HCMGIS > Basemaps > Vector tiles > Carto Basic` to add the **Carto Basic** basemap from the **HCMGIS** plugin. **Carto Basic** is a clean, visually neutral basemap that uses data from **OpenStreetMap**.
@@ -164,6 +168,10 @@ The georeferenced map is added as a new layer. By setting the layer to transpare
 &nbsp;
 
 We can now proceed to digitise the language polygons from the georeferenced map. This process will be covered in the next tutorial.
+
+## Output
+
+**Georeferenced Map in GeoTIFF format**: GeoTIFF is a standard raster format that stores both the image and its geographic reference information. The Alor-Pantar languages map, georeferenced in this tutorial, can be downloaded [here](out/Map%203%20The%20Alor-Pantar%20languages.tiff).
 
 ## References
 
