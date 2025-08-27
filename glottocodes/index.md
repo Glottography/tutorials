@@ -152,7 +152,7 @@ print(polygons.head(10)[['name', 'glottocode']])
     8       Kafoa   kafo1240
     9      Kamang   kama1365
 
-This output shows that the approach successfully verified Glottocodes for 8 out of 10 languages. The entries with  `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement.
+This output shows that the approach successfully identified and verified Glottocodes for 8 out of 10 languages. The entries with  `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement.
 
 
 ## Export to file 
