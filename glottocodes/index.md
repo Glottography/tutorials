@@ -138,21 +138,22 @@ After verifying the Glottocodes, we can display the results for each language to
 print(polygons.head[['name', 'glottocode']])
 ```
 
-| name | glottocode | | | | name | glottocode |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Abui | abui1241 | | | | Manet | None |
-| Adang | adan1251 | | | | Sar | sarr1247 |
-| Kabola | kabo1247 | | | | Papuna | papu1257 |
-| Nedebang | nede1245 | | | | Teiwa | teiw1235 |
-| Reta | rett1240 | | | | Kiraman | None |
-| Kamang | kama1365 | | | | Kaera | kaer1234 |
-| Kafoa | kafo1240 | | | | Sawila | sawi1256 |
-| Di'ang | None | | | | Kui | kuii1254 |
-| Kula | kula1280 | | | | Tiee | None |
-| Klon | kelo1247 | | | | Suboo | None |
-| Bukalabang | None | | | | Moo | None |
-| Blagar | blag1240 | | | | Western Pantar | lamm1241 |
-| Hamap | hama1240 | | | | Wersing | wers1238 |
+| name       | glottocode           | name           | glottocode |
+| :--------- | :--------------------| :------------- | :--------- |
+| Abui       | abui1241             | Manet          | None       |
+| Adang      | adan1251             | Sar            | sarr1247   |
+| Kabola     | kabo1247             | Papuna         | papu1257   |
+| Nedebang   | nede1245             | Teiwa          | teiw1235   |
+| Reta       | rett1240             | Kiraman        | None       |
+| Kamang     | kama1365             | Kaera          | kaer1234   |
+| Kafoa      | kafo1240             | Sawila         | sawi1256   |
+| Di'ang     | None                 | Kui            | kuii1254   |
+| Kula       | kula1280             | Tiee           | None       |
+| Klon       | kelo1247             | Suboo          | None       |
+| Bukalabang | None                 | Moo            | None       |
+| Blagar     | blag1240             | Western Pantar | lamm1241   |
+| Hamap      | hama1240             | Wersing        | wers1238   |
+
 
 The approach successfully identified and verified Glottocodes for 18 out of 25 languages. The entries with `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement, such as a larger buffer size.
 
