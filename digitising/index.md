@@ -1,6 +1,8 @@
  # Digitising language polygons in QGIS
 
-Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). We will explore two different approaches to digitising language polygons from a language map.
+Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). This tutorial focuses on copying the geometry of the language polygons from the map. For information on how to copy attributes (including Glottocodes) and metadata, see the [Attributes and Metadata](../metadata/index.md) and the [Glottocodes tutorial](../glottocodes/index.md). 
+
+We will explore two different approaches to digitising language polygons from a language map. 
 
 ### A: [Digitising Language Polygons fom scratch](#digitising-language-polygons-from-scratch)
 This method involves manually drawing polygons one by one. It is quick and straightforward but can introduce geometric and topological inconsistencies, particularly where the language map does not align well with coastlines or landforms. This issue is more likely to occur with maps that have coarse spatial resolution or inaccurate georeferencing. Conversely, digitising from scratch is best suited to inland regions, where coastal accuracy is less important, or to high-resolution maps that have been accurately georeferenced.
@@ -8,9 +10,19 @@ This method involves manually drawing polygons one by one. It is quick and strai
 ### B: [Splitting language polygons from existing landforms](#splitting-language-polygons-from-existing-landforms)
 This method involves splitting language areas from an existing polygon dataset of continents and landforms. The resulting language polygons follow coastlines and land boundaries derived from high-resolution satellite imagery, which are often more accurate than those shown on a scanned or georeferenced map. However, a key limitation is that the language polygons are constrained by the boundaries of the existing dataset, which may omit small or irregular geographic features, such as islands or narrow coastal strips.
 
----
 
-# Digitising language polygons from scratch
+Finally, we [merge the digitised individual polygons into Multipolygons](#merging-polygons-by-language-name) grouped by language name. Some languages are represented by several disjoint polygons, which we combine into a single Multipolygon geometry for easier handling. 
+
+
+## Requirements 
+**Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
+
+**Data**: A georeferenced map in GeoTIFF format. In this tutorial, we digitise the Alor-Pantar languages map from the [Georeferencing tutorial](../georeferencing/index.md), whose GeoTIFF can be downloaded [here](out/Map%203%20The%20Alor-Pantar%20languages.tiff). 
+For part B, we also use **Land polygons, including major islands**, from the [1:10m Physical Vectors dataset by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/). These data are provided as Shapefiles, a widely used legacy format for storing geographic vector data.
+
+
+
+## Digitising language polygons from scratch
 
 Before digitising, we need to load the **georeferenced raster map** of the Alor Pantar languages we created in the [Georeferencing tutorial](../georeferencing/index.md). Go to **Layer** > **Add Layer** > **Add Raster Layer...** and locate the file, or drag and drop the file into the **Layers** panel.
 
@@ -46,7 +58,7 @@ In the dialog box, click the `...` button next to **Database** to choose a locat
 
 For a detailed explanation of all attributes needed for Glottography polygons, see the [Metadata tutorial](../metadata/index.md). In the **Advanced** section, change the name of the **Feature id column** to `id`. Once all fields are defined, click **OK** to create the GeoPackage layer.
 
-## Start Digitising
+### Start Digitising
 
 Ensure that your new GeoPackage layer is selected in the **Layers** panel. Enable **Edit Mode** by clicking the **pencil icon** in the toolbar, or right-click the layer and select **Toggle Editing**.
 
@@ -57,7 +69,7 @@ Ensure that your new GeoPackage layer is selected in the **Layers** panel. Enabl
 
 &nbsp;
 
-The icons in the **Digitizing Toolbar** should now become active. Click the **Add Polygon Feature** tool.
+The icons in the **Digitsing Toolbar** should now become active. Click the **Add Polygon Feature** tool.
 
 <figure>
   <img src="images/add_polygon_feature.png" alt="Activate the Add Polygon Feature" width="800" />
@@ -102,8 +114,10 @@ Don’t forget to save your QGIS project regularly by going to **Project** > **S
 
 &nbsp;
 
+When you have finished digitising, head to section [Merging polygons by language name](#merging-polygons-by-language-name) to combine the digitised individual polygons into Multipolygons grouped by language name.
 
-## Snapping 
+
+### Snapping 
 
 To improve the accuracy of your digitising when adding polygons, you can enable **snapping** so that new features align precisely with existing ones. First, make sure the **Snapping Toolbar** is visible. Go to **View** > **Toolbars** > **Snapping Toolbar**. In the **Snapping Toolbar**, click the **magnet icon** to enable snapping.
 
@@ -126,9 +140,9 @@ Set the **snapping distance**. Typically 10 pixels is a good starting point. Nex
 Digitising now works as before, but with one key difference: QGIS will automatically snap new vertices to nearby existing ones when in snapping distance, helping you maintain clean, topologically correct boundaries.
 
 
-## Cutting enclave language polygons
+### Cutting enclave language polygons
 
-In some cases, a language area may be completely surrounded by another.  An example is _Pennsylvania Dutch_ in the USA, entirely enclosed by English-speaking regions.  For such a language enclave, we first cut a hole in the surrounding language area and then fill that hole with a new polygon representing the enclave language. This approach is suited for very specific cases and may not be commonly needed. However, in situations where an isolated language enclave exists, it is often the only viable method. While there is no such enclave on the Alor-Pantar language map, we will briefly walk through the steps required to create one. Click the **Toggle Editing** icon to start editing.  Ensure the **Advanced Digitizing Toolbar** is active.  If not, go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. In the **Advanced Digitizing Toolbar**, click the **Fill Ring** icon.
+In some cases, a language area may be completely surrounded by another.  An example is _Pennsylvania Dutch_ in the USA, entirely enclosed by English-speaking regions.  For such a language enclave, we first cut a hole in the surrounding language area and then fill that hole with a new polygon representing the enclave language. This approach is suited for very specific cases and may not be commonly needed. However, in situations where an isolated language enclave exists, it is often the only viable method. While there is no such enclave on the Alor-Pantar language map, we will briefly walk through the steps required to create one. Click the **Toggle Editing** icon to start editing.  Ensure the **Advanced Digitising Toolbar** is active.  If not, go to **View** > **Toolbars** > **Advanced Digitising Toolbar**. In the **Advanced Digitising Toolbar**, click the **Fill Ring** icon.
 
 <figure>
   <img src="images/fill_ring_tool.png" alt="Activate the fill ring tool" width="800" />
@@ -156,9 +170,9 @@ You can now select the filled ring to verify that the tool created a new polygon
 &nbsp;
 
 
-# Splitting language polygons from existing landforms
+## Splitting language polygons from existing landforms
 
-This method splits language areas from an existing polygon dataset of continents and landforms. We use the **Land polygons including major islands** from the [1:10m Physical Vectors by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/).  The Natural Earth land polygons are available as shapefiles, a legacy standard for storing geographic vector data. To load the shapefile in QGIS, go to **Layer** > **Add Layer** > **Add Vector Layer...**, browse to the file location of the Natural Earth land polygon shapefile, and click **Add**. Alternatively, you can simply drag and drop the shapefile into the **Layers** panel in QGIS. 
+This method splits language areas from an existing polygon dataset of continents and landforms. We use the **Land polygons including major islands** shapefile from the [1:10m Physical Vectors by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/).  To load the shapefile in QGIS, go to **Layer** > **Add Layer** > **Add Vector Layer...**, browse to the file location of the Natural Earth land polygon shapefile, and click **Add**. Alternatively, you can simply drag and drop the shapefile into the **Layers** panel in QGIS. 
 
 <figure>
   <img src="images/natural_earth_land_polygons.png" alt="The Natural Earth Land Polygons" width="800" />
@@ -169,7 +183,7 @@ This method splits language areas from an existing polygon dataset of continents
 
 We can already see that the Natural Earth land polygons are not detailed enough for this region — they are missing the Pura and Treweng islands. While we likely wouldn’t use this dataset for digitising this language map, we will carry on for the sake of demonstrating how to cut language polygons.
 
-## Preparing the Base Layer for Digitising
+### Preparing the Base Layer for Digitising
 
 The Natural Earth land polygons will serve as the base from which we cut out the digitised language areas. We need to prepare this vector layer first. Shapefiles are a clunky, legacy format that store geometry and attribute data across separate files. To streamline our workflow, we convert the layer to a **GeoPackage**. Right-click the layer in the **Layers** panel and go to **Export** > **Save Features As...**.
 
@@ -253,7 +267,7 @@ In the dialog, save the selected features as a **GeoPackage**. Use the name of t
 We have now cropped the Natural Earth polygons to only those overlapping with the language map.
 
 
-## Editing the Attribute Table
+### Editing the Attribute Table
 
 Next, we prepare the attribute table by removing irrelevant fields and adding those required by Glottography. Right-click the cropped layer and select **Open Attribute Table**.
 
@@ -321,7 +335,7 @@ Repeat the process to add the remaining fields `name`, `full_map_name`, `year`, 
 Your layer is now ready for splitting off language areas.
 
 
-## Splitting Language Polygons
+### Splitting Language Polygons
 
 To better see the map beneath, adjust the visual appearance of the cropped layer.  Right-click the layer and select **Properties**.
 
@@ -350,7 +364,7 @@ Now we begin digitising. Click the **Toggle Editing** icon to start editing.
 
 &nbsp;
 
-Ensure the **Advanced Digitizing Toolbar** is active. If not go to **View** > **Toolbars** > **Advanced Digitizing Toolbar**. Then click the **Split Features** tool and begin tracing the boundary of the language polygon.
+Ensure the **Advanced Digitising Toolbar** is active. If not go to **View** > **Toolbars** > **Advanced Digitising Toolbar**. Then click the **Split Features** tool and begin tracing the boundary of the language polygon.
 
 <figure>
   <img src="images/split_features_icon.png" alt="Activete the split features tool" width="800" />
@@ -371,7 +385,7 @@ To trace the Kiraman language area, start in the ocean southwest of the landmass
 If you receive the error message:  **"No features were split: If there are selected features, the split tool only applies to those..."**,   this usually means the wrong feature was selected.  Click **Deselect Features from All Layers** to fix the issue.
 
 
-## Adding Attribute Information
+### Adding Attribute Information
 
 After tracing a language polygon, fill in the attribute fields.  Use the **Identify Features** tool and ensure only the new polygon is highlighted.
 
@@ -401,3 +415,39 @@ A form will open where you can enter the relevant attribute data for the Kiraman
 &nbsp;
 
 Click **OK** when done. Repeat the process until all language polygons are split from the Natural Earth land polygons.
+
+## Merging polygons by language name
+
+Some languages are represented by several disjoint polygons. For example, the Wersing language occurs in Multiple polygons in the northeast, east, and southeast of Alor Island. We merge all digitised individual polygons into a single geometry — a Multipolygon — based on shared language name. Note, however, that this approach assumes the name uniquely identifies a language. If different languages share the same name, the merge into Multipolygons must instead be based on another identifier or attribute.
+
+
+
+Click **Vector** > **Geometry Tools** > **Collect Geometries...**. The **Collect Geometries** dialog will open. 
+
+<figure>
+  <img src="images/collect_geometries.png" alt="Open the Collect Geometries dialog" width="800" />
+  <figcaption><em>Open the Collect Geometries dialog.</em></figcaption>
+</figure>
+
+&nbsp;
+
+In the **Collect Geometries** dialog, define the **Input Layer** and set the **name** column as the **Unique ID fields**. This will merge all polygons based on the shared name.  This approach assumes that the name uniquely identifies a language, which is the case here.  In **Collected**, define the output file in **GeoPackage** format and specify the layer name.  Click **Run**. QGIS will then merge the polygons into Multipolygon geometries based on shared name. 
+
+<figure>
+  <img src="images/collect_geometries_dialog.png" alt="The Collect Geometries dialog" width="500" />
+  <figcaption><em>The Collect Geometries dialog.</em></figcaption>
+</figure>
+
+&nbsp;
+
+We can verify that Wersing, for example, is represented by a single geometry.  Note that since we used the **name** rather than the **id** column during merging, polygons with distinct IDs were combined into a single Multipolygon and some IDs got lost. Also note that QGIS routinely adds an additional **fid** column for its own internal identification. For our purposes, we can simply ignore this column.  
+
+<figure>
+  <img src="images/wersing_multipolygon.png" alt="The Wersing Multipolygon" width="800" />
+  <figcaption><em>The individual polygons of the Wersing language merged into a single Multipolygon.</em></figcaption>
+</figure>
+
+## Output
+
+A **GeoPackage** file containing language polygons and attributes (see [Attributes and metadata](../metadata/index.md) and [Glottocodes tutorial](../glottocodes/index.md)). The Alor–Pantar language polygons, digitised in this tutorial, can be downloaded [here](out/schapper2020papuan.gpkg).
+

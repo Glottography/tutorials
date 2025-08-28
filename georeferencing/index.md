@@ -6,7 +6,7 @@ This tutorial walks you through the process of georeferencing a language map pro
 ## Requirements 
 **Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
 
-**Data**: A map in raster image format (e.g., JPG, TIFF, or PNG). In this tutorial, we will georeference a map of the Alor-Pantar languages in Indonesia from Schapper (2020), *Introduction to the Papuan Languages of Timor, Alor, and Pantar*. The map is available as a JPG raster image [here](in/map3papuan.jpg).
+**Data**: A map in raster image format (e.g., JPG, TIFF, or PNG). In this tutorial, we will georeference a map of the Alor-Pantar languages in Indonesia from Schapper (2020), *Introduction to the Papuan Languages of Timor, Alor, and Pantar*. The map is available as a JPG raster image [here](images/map3papuan.jpg).
 
 <figure>
   <img src="images/map3papuan.jpg" alt="Map of the Alor Pantar languages" width="500"/>
@@ -171,7 +171,7 @@ We can now proceed to digitise the language polygons from the georeferenced map.
 
 ## Output
 
-**Georeferenced Map in GeoTIFF format**: GeoTIFF is a standard raster format that stores both the image and its geographic reference information. The Alor-Pantar languages map, georeferenced in this tutorial, can be downloaded [here](out/Map%203%20The%20Alor-Pantar%20languages.tiff).
+A **Georeferenced Map in GeoTIFF format**: GeoTIFF is a standard raster format that stores both the image and its geographic reference information. The Alor-Pantar languages map, georeferenced in this tutorial, can be downloaded [here](out/Map%203%20The%20Alor-Pantar%20languages.tiff).
 
 ## References
 

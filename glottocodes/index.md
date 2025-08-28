@@ -1,7 +1,18 @@
 # Finding Glottocodes
 
-In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  
-We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the tutorial on [Attributes and Metadata](../metadata/index.md). 
+In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](../metadata/index.md). 
+
+
+## Requirements 
+
+**Software:** [Python 3](https://www.python.org/) is a high-level free and open-source programming language. This tutorial uses version 3.12 with the `guess_glottocode` package installed. For installation instructions, see below.
+
+**Data:** A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see the [Attributes and Metadata tutorial](../attributes/index.md)). The Alor–Pantar language polygons, including attribute data, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).  Note that this file already includes a `glottocode` column, which we will ignore for the purposes of this tutorial.
+
+**API keys:** The `guess_glottocode` package sends requests to a large language model (LLM) provider to find Glottocodes. Currently supported providers are [Google Gemini](https://aistudio.google.com/apikey) and [Anthropic]((https://console.anthropic.com/settings/keys)). To use either service, you must first create an API key from the provider (see below).
+
+
+## What is a Glottocode? 
 
 Glottocodes are unique identifiers for languages, dialects, and language families, maintained by [Glottolog](https://glottolog.org).  
 The simplest way to find a Glottocode is to look it up manually:
@@ -51,39 +62,26 @@ First, we load the [Alor-Pantar GeoPackage file](../glottocodes/data) using GeoP
 
 ```python
 import geopandas as gpd
-path = "data/schapper2020papuan_raw.gpkg"
-polygons = gpd.read_file(path)
+polygons = gpd.read_file("schapper2020papuan.gpkg")
 ```
 
-We can quickly inspect the GeoDataFrame by displaying the first 10 entries, confirming that it includes a geometry and all attributes and metadata recorded in the [Attributes and Metadata tutorial](../metadata/index.md), except for the Glottocode, which we will add here.
+We can quickly inspect the GeoDataFrame by displaying the first 10 entries, confirming that it includes a geometry as well as all attributes and metadata recorded in the [Attributes and Metadata tutorial](../metadata/index.md). Note that it already contains a `glottocode` column with entries for most languages; for the purposes of this tutorial, we will ignore it and generate Glottocodes using a large language model.
 
 ```python
 print(polygons.head(10))
 ```
 
-       id        name map_name_full  year note  \
-    0   1        Abui          Map3  2020        
-    1   2       Adang          Map3  2020        
-    2   3      Blagar          Map3  2020        
-    3   4  Bukalabang          Map3  2020        
-    4   5      Di'ang          Map3  2020        
-    5   6       Hamap          Map3  2020        
-    6   7      Kabola          Map3  2020        
-    7   8       Kaera          Map3  2020        
-    8   9       Kafoa          Map3  2020        
-    9  10      Kamang          Map3  2020        
-    
-                                                geometry  
-    0  MULTIPOLYGON (((124.7554 -8.14784, 124.7538 -8...  
-    1  MULTIPOLYGON (((124.50134 -8.13276, 124.49954 ...  
-    2  MULTIPOLYGON (((124.28606 -8.47974, 124.28184 ...  
-    3  MULTIPOLYGON (((124.24741 -8.25698, 124.27363 ...  
-    4  MULTIPOLYGON (((124.16262 -8.36901, 124.17733 ...  
-    5  MULTIPOLYGON (((124.51194 -8.25331, 124.51783 ...  
-    6  MULTIPOLYGON (((124.50134 -8.13276, 124.50632 ...  
-    7  MULTIPOLYGON (((124.30453 -8.3351, 124.28255 -...  
-    8  MULTIPOLYGON (((124.43155 -8.33392, 124.44223 ...  
-    9  MULTIPOLYGON (((124.8879 -8.16338, 124.8897 -8...  
+       name  year map_name_full  id glottocode  note                                           geometry
+0      Abui  2020          Map3   1   abui1241  None  MULTIPOLYGON (((124.7554 -8.14784, 124.7538 -8...
+1     Adang  2020          Map3  11   adan1251  None  MULTIPOLYGON (((124.50134 -8.13276, 124.49954 ...
+2    Kabola  2020          Map3   7   kabo1247  None  MULTIPOLYGON (((124.50134 -8.13276, 124.50632 ...
+3  Nedebang  2020          Map3  17   nede1245  None  MULTIPOLYGON (((124.18602 -8.28363, 124.19112 ...
+4      Reta  2020          Map3  19   rett1240  None  MULTIPOLYGON (((124.3603 -8.33161, 124.34958 -...
+5    Kamang  2020          Map3  10   kama1365  None  MULTIPOLYGON (((124.8879 -8.16338, 124.8897 -8...
+6     Kafoa  2020          Map3   9   kafo1240  None  MULTIPOLYGON (((124.43155 -8.33392, 124.44223 ...
+7    Di'ang  2020          Map3   5       None  None  MULTIPOLYGON (((124.16262 -8.36901, 124.17733 ...
+8      Kula  2020          Map3  14   kula1280  None  MULTIPOLYGON (((124.99314 -8.32649, 124.9898 -...
+9      Klon  2020          Map3  12   kelo1247  None  MULTIPOLYGON (((124.44437 -8.35612, 124.44838 ...
 
 
 ## Finding a Suitable Glottocode Using an LLM
@@ -137,30 +135,59 @@ polygons['glottocode'] = polygons.apply(verify_per_row, axis=1)
 After verifying the Glottocodes, we can display the results for each language to see which have confirmed matches.
 
 ```python
-print(polygons.head(10)[['name', 'glottocode']])
+print(polygons.head[['name', 'glottocode']])
 ```
 
-             name glottocode
-    0        Abui   abui1241
-    1       Adang   adan1251
-    2      Blagar   blag1240
-    3  Bukalabang       None
-    4      Di'ang       None
-    5       Hamap   hama1240
-    6      Kabola   kabo1247
-    7       Kaera   kaer1234
-    8       Kafoa   kafo1240
-    9      Kamang   kama1365
+  name glottocode
+0             Abui   abui1241
+1            Adang   adan1251
+2           Kabola   kabo1247
+3         Nedebang   nede1245
+4             Reta   rett1240
+5           Kamang   kama1365
+6            Kafoa   kafo1240
+7           Di'ang       None
+8             Kula   kula1280
+9             Klon   kelo1247
+10      Bukalabang       None
+11          Blagar   blag1240
+12           Hamap   hama1240
+13           Manet       None
+14             Sar   sarr1247
+15          Papuna   papu1257
+16           Teiwa   teiw1235
+17         Kiraman       None
+18           Kaera   kaer1234
+19          Sawila   sawi1256
+20             Kui   kuii1254
+21            Tiee       None
+22           Suboo       None
+23             Moo       None
+24  Western Pantar   lamm1241
+25         Wersing   wers1238
 
-This output shows that the approach successfully identified and verified Glottocodes for 8 out of 10 languages. The entries with  `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement.
+The approach successfully identified and verified Glottocodes for 18 out of 25 languages. The entries with `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement, such as a larger buffer size.
 
 
 ## Export to file 
 
-Once the Glottocodes are verified, we export the enriched GeoDataFrame to a GeoPackage file.
+Once the Glottocodes are verified, we remove the column `unverified_glottocode` and export the GeoDataFrame to a `GeoPackage` file.
 
 ```python
-path_out = "data/schapper2020papuan_glottocoded.gpkg"
-polygons.to_file(path_out, driver="GPKG")
+polygons = polygons.drop(columns=["unverified_glottocode"])
+polygons.to_file("schapper2020papuan.gpkg", driver="GPKG")
 ```
 
+We also export the attribute information as a `CSV` file. For details on why this file is needed, see the [Attributes and metadata tutorial](../metadata/index.md).
+
+```python
+polygons.drop(columns="geometry").to_csv("schapper2020papuan.csv", index=False)
+```
+
+## Output
+
+**Data**:  
+
+A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)), attributes, and Glottocodes (see also the [Attributes and metadata tutorial](../metadata/index.md)).  The Alor–Pantar language polygons, including attribute data and Glottocodes, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg). Note that in this file some Glottocodes were added manually.  
+
+A CSV file containing the attribute and Glottocode data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
