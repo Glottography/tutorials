@@ -71,19 +71,19 @@ We can quickly inspect the GeoDataFrame by displaying the first 10 entries, conf
 print(polygons.head(10))
 ```
 
-| name | year | map_name_full | id | glottocode | note | geometry |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Abui | 2020 | Map3 | 1 | abui1241 | None | MULTIPOLYGON (((124.7554 -8.147... |
-| Adang | 2020 | Map3 | 11 | adan1251 | None | MULTIPOLYGON (((124.50134 -8.132... |
-| Kabola | 2020 | Map3 | 7 | kabo1247 | None | MULTIPOLYGON (((124.50134 -8.132... |
-| Nedebang | 2020 | Map3 | 17 | nede1245 | None | MULTIPOLYGON (((124.18602 -8.283... |
-| Reta | 2020 | Map3 | 19 | rett1240 | None | MULTIPOLYGON (((124.3603 -8.331... |
-| Kamang | 2020 | Map3 | 10 | kama1365 | None | MULTIPOLYGON (((124.8879 -8.163... |
-| Kafoa | 2020 | Map3 | 9 | kafo1240 | None | MULTIPOLYGON (((124.43155 -8.333... |
-| Di'ang | 2020 | Map3 | 5 | None | None | MULTIPOLYGON (((124.16262 -8.369... |
-| Kula | 2020 | Map3 | 14 | kula1280 | None | MULTIPOLYGON (((124.99314 -8.326... |
-| Klon | 2020 | Map3 | 12 | kelo1247 | None | MULTIPOLYGON (((124.44437 -8.356... |
-
+       id        name map_name_full  year note                                          geometry 
+    0   1        Abui          Map3  2020      MULTIPOLYGON (((124.7554 -8.14784, 124.7538 -8...  
+    1   2       Adang          Map3  2020      MULTIPOLYGON (((124.50134 -8.13276, 124.49954 ...
+    2   3      Blagar          Map3  2020      MULTIPOLYGON (((124.28606 -8.47974, 124.28184 ... 
+    3   4  Bukalabang          Map3  2020      MULTIPOLYGON (((124.24741 -8.25698, 124.27363 ...
+    4   5      Di'ang          Map3  2020      MULTIPOLYGON (((124.16262 -8.36901, 124.17733 ...  
+    5   6       Hamap          Map3  2020      MULTIPOLYGON (((124.51194 -8.25331, 124.51783 ... 
+    6   7      Kabola          Map3  2020      MULTIPOLYGON (((124.50134 -8.13276, 124.50632 ... 
+    7   8       Kaera          Map3  2020      MULTIPOLYGON (((124.30453 -8.3351, 124.28255 -...
+    8   9       Kafoa          Map3  2020      MULTIPOLYGON (((124.43155 -8.33392, 124.44223 ...  
+    9  10      Kamang          Map3  2020      MULTIPOLYGON (((124.8879 -8.16338, 124.8897 -8... 
+    
+                                                
 ## Finding a Suitable Glottocode Using an LLM
 
 While large language models (LLMs) can sometimes guess a language's Glottocode from its name, this approach is unreliable. LLMs may hallucinate nonexistent codes or confuse languages with similar names.  A more reliable approach is to 
@@ -137,22 +137,34 @@ After verifying the Glottocodes, we can display the results for each language to
 ```python
 print(polygons.head[['name', 'glottocode']])
 ```
+                  name   glottocode    
+    0             Abui   abui1241
+    1            Adang   adan1251
+    2           Kabola   kabo1247
+    3         Nedebang   nede1245
+    4             Reta   rett1240
+    5           Kamang   kama1365
+    6            Kafoa   kafo1240
+    7           Di'ang       None
+    8             Kula   kula1280
+    9             Klon   kelo1247
+    10      Bukalabang   blag1240
+    11          Blagar   blag1240
+    12           Hamap   hama1240
+    13           Manet   mane1265
+    14             Sar   sarr1247
+    15          Papuna   papu1257
+    16           Teiwa   teiw1235
+    17         Kiraman   kira1248
+    18           Kaera   kaer1234
+    19          Sawila   sawi1256
+    20             Kui   kuii1254
+    21            Tiee   tiay1238
+    22           Suboo   sibo1242
+    23             Moo       None
+    24  Western Pantar   lamm1241
+    25         Wersing   wers1238
 
-| name       | glottocode           | name           | glottocode |
-| :--------- | :--------------------| :------------- | :--------- |
-| Abui       | abui1241             | Manet          | None       |
-| Adang      | adan1251             | Sar            | sarr1247   |
-| Kabola     | kabo1247             | Papuna         | papu1257   |
-| Nedebang   | nede1245             | Teiwa          | teiw1235   |
-| Reta       | rett1240             | Kiraman        | None       |
-| Kamang     | kama1365             | Kaera          | kaer1234   |
-| Kafoa      | kafo1240             | Sawila         | sawi1256   |
-| Di'ang     | None                 | Kui            | kuii1254   |
-| Kula       | kula1280             | Tiee           | None       |
-| Klon       | kelo1247             | Suboo          | None       |
-| Bukalabang | None                 | Moo            | None       |
-| Blagar     | blag1240             | Western Pantar | lamm1241   |
-| Hamap      | hama1240             | Wersing        | wers1238   |
 
 
 The approach successfully identified and verified Glottocodes for 18 out of 25 languages. The entries with `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement, such as a larger buffer size.
@@ -179,4 +191,4 @@ polygons.drop(columns="geometry").to_csv("schapper2020papuan.csv", index=False)
 
 A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)), attributes, and Glottocodes (see also the [Attributes and metadata tutorial](../metadata/index.md)).  The Alor–Pantar language polygons, including attribute data and Glottocodes, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg). Note that in this file some Glottocodes were added manually.  
 
-A CSV file containing the attribute and Glottocode data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
+A CSV file containing the attribute and Glottocode data, linked to the digitised polygons via the `id` column. The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
