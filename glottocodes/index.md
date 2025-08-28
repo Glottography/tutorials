@@ -136,7 +136,6 @@ After verifying the Glottocodes, we can display the results for each language to
 
 ```python
 print(polygons.head[['name', 'glottocode']])
-```
 
   name glottocode
 0             Abui   abui1241
@@ -165,6 +164,7 @@ print(polygons.head[['name', 'glottocode']])
 23             Moo       None
 24  Western Pantar   lamm1241
 25         Wersing   wers1238
+```
 
 The approach successfully identified and verified Glottocodes for 18 out of 25 languages. The entries with `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement, such as a larger buffer size.
 
