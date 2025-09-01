@@ -31,7 +31,7 @@ A source publication is any piece of work that includes a language map we wish t
 }
 ```
 
-The BibTeX entry consists of the entry type (e.g., `@inbook`), a citation key (e.g., `schapper2020papuan`), and several fields or tags that define the details of the publication, such as `author`, `title`, and `url`. The type `@inbook` indicates that the source is a chapter in a book. Similarly, `@article` is used for journal articles, and `@book` for standalone books. Glottography requires the citation key to follow the format `authorYYYYtopic`, and the corresponding BibTeX file must be named `authorYYYYtopic.bib`, for example, `schapper2020papuan.bib`. The Glottography import script in the [data curation tutorial](../data_curation/index.md) depends on both the citation key and the file name being in this exact format to function correctly.
+The BibTeX entry consists of the entry type (e.g., `@inbook`), a citation key (e.g., `schapper2020papuan`), and several fields or tags that define the details of the publication, such as `author`, `title`, and `url`. The type `@inbook` indicates that the source is a chapter in a book. Similarly, `@article` is used for journal articles, and `@book` for standalone books. Glottography requires the citation key to follow the format `authorYYYYtopic`, and the corresponding BibTeX file must be named `authorYYYYtopic.bib`, for example, `schapper2020papuan.bib`. The Glottography import script in the [data curation tutorial](../curation/index.md) depends on both the citation key and the file name being in this exact format to function correctly.
 
 
 ### How to obtain a BibTeX Entry
@@ -80,7 +80,7 @@ The table below shows the attributes for selected language areas from the Alor-P
 
 ### Exporting the attribute data as CSV
 
-Glottography expects attribute data to be exported to a separate CSV file, where each row corresponds to a digitised language area and is linked to the polygon geometry via a unique identifier (`id`). Keeping metadata in plain-text CSV format makes it easy to update and manage. It is both human-readable and compatible with version control tools like Git. The GeoPackage file can easily be exported as a CSV in QGIS. The following steps assume that QGIS is open and that all language areas and their polygons have been recorded and saved in a **GeoPackage**, following the [digitising language areas](../digitising/index.md) tutorial.
+Glottography expects attribute data to be exported to a separate CSV file, where each row corresponds to a digitised language area and is linked to the polygon geometry via a unique identifier (`id`). Keeping metadata in plain-text CSV format makes it easy to update and manage. It is both human-readable and compatible with version control tools like Git. The GeoPackage file can easily be exported as a CSV in QGIS. The following steps assume that QGIS is open and that all language areas and their polygons have been recorded and saved in a GeoPackage, following the [Digitising Tutorial](../digitising/index.md).
 
 
 In the **Layers** panel, right-click the language polygon layer and select **Export** > **Save Features As...**.
