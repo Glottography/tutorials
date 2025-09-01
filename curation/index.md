@@ -112,6 +112,8 @@ The screenshot below shows the folder structure of the newly initialised Glottog
   <figcaption><em>The folder structure in a Glottogaphy dataset.</em></figcaption>
 </figure>
 
+&nbsp;
+
 
 The three main folders are still mostly empty:
 
@@ -138,6 +140,7 @@ The screenshot below shows the `raw` and the `etc` folder after distributing the
   <figcaption><em>The <code>raw</code> and <code>etc</code> folders after distributing the language polygons (<code>dataset.geojson</code>), attributes (<code>features.csv</code>), and reference (<code>sources.bib</code>).</em></figcaption>
 </figure>
 
+&nbsp;
 
 
 ## Running the data curation script
