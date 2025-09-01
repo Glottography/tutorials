@@ -5,7 +5,7 @@ This tutorial introduces the attributes and metadate required when digitising Gl
 ## Requirements 
 **Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
 
-**Data:** Digitised language polygons in **GeoPackage** format (`.gpkg`).  In this tutorial, we use the digitised Alor–Pantar language polygons from the [Digitising tutorial](../digitising/index.md), which can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
+**Data:** Digitised language polygons in GeoPackage format (`.gpkg`).  In this tutorial, we use the digitised Alor–Pantar language polygons from the [Digitising tutorial](../digitising/index.md), which can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
 
 
 ## Metadata
@@ -105,9 +105,9 @@ In the dialog that appears configure the export settings. Set **Format** to `Com
 &nbsp;
 
 ## Output
-A **BibTeX** file containing a reference to the source publication in BibTeX format.  The BibTeX file for the Alor–Pantar language map can be downloaded [here](out/schapper2020papuan.bib).
+A BibTeX file containing a reference to the source publication in BibTeX format.  The BibTeX file for the Alor–Pantar language map can be downloaded [here](out/schapper2020papuan.bib).
 
-A **GeoPackage** file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see also the [Glottocodes tutorial](../glottocodes/index.md)).  The Alor–Pantar language polygons including atttribute data can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
+A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see also the [Glottocodes tutorial](../glottocodes/index.md)).  The Alor–Pantar language polygons including atttribute data can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
 
-A **CSV** file containing the attribute data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](out/schapper2020papuan.csv).
+A CSV file containing the attribute data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](out/schapper2020papuan.csv).
 
