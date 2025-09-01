@@ -17,7 +17,7 @@ A GeoPackage file containing the language polygons (see the [Digitising tutorial
 
 A CSV file containing the attribute data, linked to the digitised polygons via the `id` column. The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
 
-A BibTeX file containing a reference to the source publication in BibTeX format.  The BibTeX file for the Alor–Pantar language map can be downloaded [here](out/schapper2020papuan.bib).
+A BibTeX file containing a reference to the source publication in BibTeX format.  The BibTeX file for the Alor–Pantar language map can be downloaded [here](../metadata/out/schapper2020papuan.bib).
 
 A local clone of the latest [Glottolog](https://github.com/glottolog) repository (see below). This data will be used to assign the language polygons to languoids classified as languages or families according to Glottolog.
 
