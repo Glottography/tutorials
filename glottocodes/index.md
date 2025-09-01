@@ -7,9 +7,9 @@ In this tutorial, we will find the Glottocodes for the language areas shown on t
 
 **Software:** [Python 3](https://www.python.org/) is a high-level free and open-source programming language. This tutorial uses version 3.12 with the `guess_glottocode` package installed. For installation instructions, see below.
 
-**Data:** A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see the [Attributes and Metadata tutorial](../attributes/index.md)). The Alor–Pantar language polygons, including attribute data, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).  Note that this file already includes a `glottocode` column, which we will ignore for the purposes of this tutorial.
+**Data:** A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see the [Attributes and Metadata tutorial](../metatdata/index.md)). The Alor–Pantar language polygons, including attribute data, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).  Note that this file already includes a `glottocode` column, which we will ignore for the purposes of this tutorial.
 
-**API keys:** The `guess_glottocode` package sends requests to a large language model (LLM) provider to find Glottocodes. Currently supported providers are [Google Gemini](https://aistudio.google.com/apikey) and [Anthropic]((https://console.anthropic.com/settings/keys)). To use either service, you must first create an API key from the provider (see below).
+**API keys:** The `guess_glottocode` package sends requests to a large language model (LLM) provider to find Glottocodes. Currently supported providers are [Google Gemini](https://aistudio.google.com/apikey) and [Anthropic](https://console.anthropic.com/settings/keys). To use either service, you must first create an API key from the provider (see below).
 
 
 ## What is a Glottocode? 
@@ -57,7 +57,7 @@ The first time you call `llm.guess_glottocode` with Gemini or Anthropic, the pac
 
 ## Load the data
 
-First, we load the [Alor-Pantar GeoPackage file](../glottocodes/data) using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
+First, we load the Alor-Pantar GeoPackage file using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
 
 
 ```python
@@ -186,8 +186,6 @@ polygons.drop(columns="geometry").to_csv("schapper2020papuan.csv", index=False)
 ```
 
 ## Output
-
-**Data**:  
 
 A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)), attributes, and Glottocodes (see also the [Attributes and metadata tutorial](../metadata/index.md)).  The Alor–Pantar language polygons, including attribute data and Glottocodes, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg). Note that in this file some Glottocodes were added manually.  
 
