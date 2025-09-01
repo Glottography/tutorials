@@ -17,8 +17,7 @@ Finally, we [merge the digitised individual polygons into Multipolygons](#mergin
 ## Requirements 
 **Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
 
-**Data**: A georeferenced map in GeoTIFF format. In this tutorial, we digitise the Alor-Pantar languages map from the [Georeferencing tutorial](../georeferencing/index.md), whose GeoTIFF can be downloaded [here](out/Map%203%20The%20Alor-Pantar%20languages.tiff). 
-For part B, we also use **Land polygons, including major islands**, from the [1:10m Physical Vectors dataset by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/). These data are provided as Shapefiles, a widely used legacy format for storing geographic vector data.
+**Data**:  A georeferenced map in GeoTIFF format. In this tutorial, we digitise the Alor-Pantar languages map from the [Georeferencing tutorial](../georeferencing/index.md), whose GeoTIFF can be downloaded [here](../georeferencing/out/Map%203%20The%20Alor-Pantar%20languages.tiff). For part B, we also use **Land polygons, including major islands**, from the [1:10m Physical Vectors dataset by Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/). These data are provided as Shapefiles, a widely used legacy format for storing geographic vector data.
 
 
 
@@ -28,7 +27,8 @@ Before digitising, we need to load the **georeferenced raster map** of the Alor 
 
 We also open the **Carto Basic** basemap from the **HCMGIS** plugin as a spatial reference:  **HCMGIS** > **Basemaps** > **Vector tiles** > **Carto Basic**.
 
-Next, we create an empty polygon vector layer to store the digitised language areas. To do this, go to **Layer** > **Create Layer** > **New GeoPackage Layer...** to initialise a new **GeoPackage** file.  **GeoPackage (.gpkg)** is a file format for storing geographic features and has become the de facto standard in QGIS. The file will act as a container for the language polygons we are about to digitise.
+Next, we create an empty polygon vector layer to store the digitised language areas. To do this, go to **Layer** > **Create Layer** > **New GeoPackage Layer...** to initialise a new **GeoPackage** file.  **GeoPackage (.gpkg)** is a file format for storing geographic features and has become the de facto standard in QGIS. The file will act as a container for the language polygons we are about to digitise. In the [Data curation tutorial](../curation/index.md), we will later convert the GeoPackage to a GeoJSON file, a lightweight, human-readable format for representing geographic features. While you could digitise the polygons directly in GeoJSON format, this tutorial uses the GeoPackage format because it offers greater flexibility with projections. In GeoJSON, for example, coordinates must be expressed in longitude and latitude using decimal degrees, corresponding to the `EPSG:4326` coordinate reference system (CRS). This restriction does not apply to GeoPackages.
+
 
 <figure>
   <img src="images/new_geopackage_layer.png" alt="Creating a new GeoPackage layer." width="800" />
@@ -56,7 +56,7 @@ In the dialog box, click the `...` button next to **Database** to choose a locat
 | `glottocode`    | Text (string) |
 | `note`          | Text (string) |
 
-For a detailed explanation of all attributes needed for Glottography polygons, see the [Metadata tutorial](../metadata/index.md). In the **Advanced** section, change the name of the **Feature id column** to `id`. Once all fields are defined, click **OK** to create the GeoPackage layer.
+For a detailed explanation of all attributes needed for Glottography polygons, see the [Attributes and Metadata tutorial](../metadata/index.md). In the **Advanced** section, change the name of the **Feature id column** to `id`. Once all fields are defined, click **OK** to create the GeoPackage layer.
 
 ### Start Digitising
 
@@ -449,5 +449,5 @@ We can verify that Wersing, for example, is represented by a single geometry.  N
 
 ## Output
 
-A **GeoPackage** file containing language polygons and attributes (see [Attributes and metadata](../metadata/index.md) and [Glottocodes tutorial](../glottocodes/index.md)). The Alor–Pantar language polygons, digitised in this tutorial, can be downloaded [here](out/schapper2020papuan.gpkg).
+A GeoPackage file containing language polygons and attributes (see [Attributes and metadata](../metadata/index.md) and [Glottocodes tutorial](../glottocodes/index.md)). The Alor–Pantar language polygons, digitised in this tutorial, can be downloaded [here](out/schapper2020papuan.gpkg).
 
