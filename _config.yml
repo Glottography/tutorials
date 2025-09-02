@@ -2,11 +2,10 @@ remote_theme: pages-themes/minimal@v0.2.0
   
 plugins:
 - jekyll-remote-theme 
-
   
-title: "Glottography tutorials"
+title: "Glottography Data Tutorials"
 description: 
-    From a language map image to a Glottography dataset in five steps<br><br>
+    From a language map image to a Glottography dataset in five tutorials<br>
   <a href="/tutorials">Overview</a><br><br><br>
   <a href="/tutorials/georeferencing">Georeferencing</a><br>
   <a href="/tutorials/digitising">Digitising</a><br>
