@@ -1,0 +1,10 @@
+/* Hide the site header/title */
+header.site-header {
+  display: none;
+}
+
+/* Optional: remove extra spacing */
+body {
+  margin-top: 0;
+}
+
