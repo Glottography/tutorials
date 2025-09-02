@@ -4,5 +4,5 @@ plugins:
 - jekyll-remote-theme 
 
   
-title: "My Tutorial Site"
-description: "A step-by-step guide"
+title: "Glottography tutorials"
+description: "From a language map image to a Glottography dataset in five steps"
