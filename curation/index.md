@@ -1,3 +1,10 @@
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../glottocodes/index.md"><b>Glottocode tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
 # Data curation
 
 This tutorial shows how to turn the language polygons from the [Digitising tutorial](../digitising/index.md), along with their attributes and metadata from the [Attributes and Metadata tutorial](../metadata/index.md), into a dataset ready for [Glottography](https://github.com/Glottography). Data curation aggregates the polygons into languages and language families according to Glottolog.
@@ -165,8 +172,13 @@ The `cldf` folder includes three sets of vector geometries, each enriched with G
 
 **Family areas:** Speaker areas aggregated at the language family level according to Glottolog's classification (`families.geojson`). The Family areas GeoJSON file of the Alor–Pantar languages map can be downloaded [here](out/families.geojson).
 
-
-
+---------
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../glottocodes/index.md"><b>Glottocode tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
 
 

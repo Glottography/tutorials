@@ -1,3 +1,12 @@
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../metadata/index.md"><b>Attributes & Metadata tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../curation/index.md"><b> &nbsp; ➡ &nbsp; Data curation tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>
+
 # Finding Glottocodes
 
 In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](../metadata/index.md). 
@@ -190,3 +199,13 @@ polygons.drop(columns="geometry").to_csv("schapper2020papuan.csv", index=False)
 A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)), attributes, and Glottocodes (see also the [Attributes and metadata tutorial](../metadata/index.md)).  The Alor–Pantar language polygons, including attribute data and Glottocodes, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg). Note that in this file some Glottocodes were added manually.  
 
 A CSV file containing the attribute and Glottocode data, linked to the digitised polygons via the `id` column. The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
+
+--------------
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../metadata/index.md"><b>Attributes & Metadata tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../curation/index.md"><b> &nbsp; ➡ &nbsp; Data curation tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>

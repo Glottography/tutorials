@@ -15,7 +15,7 @@ A set of fully digitised **language polygons** in [Cross-Linguistic Data Format 
 
 ## From a language map image to a Glottography dataset in five steps
 
-1. [Georeferencing a language map](georeferencing/index.md)  
+1. [Georeferencing the language map](georeferencing/index.md)  
    Georeferencing assigns geographic coordinates to the map image, allowing it to be accurately placed and displayed in a GIS.
 
 2. [Digitising language polygons in QGIS](digitising/index.md)  

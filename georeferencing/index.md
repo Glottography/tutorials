@@ -2,7 +2,7 @@
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="../README.md"><b>Overview</b></a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocode/index.md"><b>➡ Glottocode tutorial</b></a>
+  <a href="../digitising/index.md"><b>&nbsp; ➡ &nbsp; Digitising tutorial</b></a>
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -185,10 +185,11 @@ A georeferenced map in GeoTIFF format: GeoTIFF is a standard raster format that 
 
 Schapper, Antoinette. 2020. *Introduction to The Papuan Languages of Timor, Alor and Pantar*. In Antoinette Schapper (ed.), *The Papuan Languages of Timor, Alor and Pantar: Volume 3*, pp. 1–52. Berlin, Boston: De Gruyter Mouton. [https://doi.org/10.1515/9781501511158-001](https://doi.org/10.1515/9781501511158-001)
 
+----------------- 
 <p align="center">
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="../README.md"><b>Overview</b></a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocode/index.md"><b>➡ Glottocode tutorial</b></a>
+  <a href="../digitising/index.md"><b>&nbsp; ➡ &nbsp; Digitising tutorial</b></a>
   &nbsp;&nbsp;&nbsp;
 </p>

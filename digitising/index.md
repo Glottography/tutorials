@@ -1,4 +1,14 @@
- # Digitising language polygons in QGIS
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../georeferencing/index.md"><b>Georeferencing tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../metadata/index.md"><b> &nbsp; ➡ &nbsp; Attributes & metadata tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>
+
+
+# Digitising language polygons in QGIS
 
 Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). This tutorial focuses on copying the geometry of the language polygons from the map. For information on how to copy attributes (including Glottocodes) and metadata, see the [Attributes and Metadata](../metadata/index.md) and the [Glottocodes tutorial](../glottocodes/index.md). 
 
@@ -451,3 +461,12 @@ We can verify that Wersing, for example, is represented by a single geometry.  N
 
 A GeoPackage file containing language polygons and attributes (see [Attributes and metadata](../metadata/index.md) and [Glottocodes tutorial](../glottocodes/index.md)). The Alor–Pantar language polygons, digitised in this tutorial, can be downloaded [here](out/schapper2020papuan.gpkg).
 
+------------------
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../georeferencing/index.md"><b>Georeferencing tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../metadata/index.md"><b> &nbsp; ➡ &nbsp; Attributes & metadata tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>

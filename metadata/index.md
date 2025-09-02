@@ -1,3 +1,13 @@
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../digitising/index.md"><b>Digitising tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../glottocodes/index.md"><b> &nbsp; ➡ &nbsp; Glottocode tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>
+
+
 # Attributes and Metadata
 
 This tutorial introduces the attributes and metadate required when digitising Glottography language areas from source publications. Glottography uses BibTeX entries to uniquely reference each source publication, and Glottocodes to identify the languages depicted in their maps. Because Glottocodes were introduced only relatively recently, many source publications — especially older ones — likely do not include them. As a result, assigning the correct Glottocodes to a language area can be time-consuming and may require additional effort. To assist with this process, a separate [Glottocode tutorial](../glottocodes/index.md)  explains how to automatically query and assign Glottocodes to a language area based on language name and geographic location.
@@ -111,3 +121,12 @@ A GeoPackage file containing the language polygons (see the [Digitising tutorial
 
 A CSV file containing the attribute data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](out/schapper2020papuan.csv).
 
+----------------- 
+<p align="center">&nbsp;&nbsp;&nbsp;
+  <a href="../digitising/index.md"><b>Digitising tutorial &nbsp; ⬅ &nbsp; </b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../README.md"><b>Overview</b></a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="../glottocodes/index.md"><b> &nbsp; ➡ &nbsp; Glottocode tutorial</b></a>
+  &nbsp;&nbsp;&nbsp;
+</p>
