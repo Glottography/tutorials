@@ -1,8 +1,8 @@
 <p align="center">
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md"><b>&nbsp; ➡ &nbsp; Digitising tutorial</b></a>
+  <a href="../digitising/index.md">&nbsp; ➡ &nbsp; Digitising tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -188,8 +188,8 @@ Schapper, Antoinette. 2020. *Introduction to The Papuan Languages of Timor, Alor
 ----------------- 
 <p align="center">
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md"><b>&nbsp; ➡ &nbsp; Digitising tutorial</b></a>
+  <a href="../digitising/index.md">&nbsp; ➡ &nbsp; Digitising tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>

@@ -1,9 +1,9 @@
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md"><b>Digitising tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../digitising/index.md">Digitising tutorial &nbsp; ⬅ &nbsp; </a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md"><b> &nbsp; ➡ &nbsp; Glottocode tutorial</b></a>
+  <a href="../glottocodes/index.md"> &nbsp; ➡ &nbsp; Glottocode tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -123,10 +123,10 @@ A CSV file containing the attribute data, linked to the digitised polygons via t
 
 ----------------- 
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md"><b>Digitising tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../digitising/index.md">Digitising tutorial &nbsp; ⬅ &nbsp; </a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md"><b> &nbsp; ➡ &nbsp; Glottocode tutorial</b></a>
+  <a href="../glottocodes/index.md">&nbsp; ➡ &nbsp; Glottocode tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
