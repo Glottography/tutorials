@@ -1,4 +1,5 @@
 <style>
+header.site-header,
 header.page-header,
 h1.site-title {
   display: none !important;
@@ -10,8 +11,6 @@ body {
 }
 </style>
 
-
-# Glottography Tutorials
 
 This tutorial series walks you through the five main steps to create **language speaker area polygons** from a language map image, ready for upload to [**Glottography**](https://github.com/Glottography)*. 
 
