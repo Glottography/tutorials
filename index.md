@@ -1,5 +1,4 @@
 <style>
-header.site-header,
 header.page-header,
 h1.site-title {
   display: none !important;
