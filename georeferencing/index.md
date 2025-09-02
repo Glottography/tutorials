@@ -2,6 +2,7 @@
 
 This tutorial walks you through the process of georeferencing a language map provided as a raster image in QGIS, an open-source geographic information system (GIS). Georeferencing assigns geographic coordinates to the map, enabling it to be accurately located and displayed in a GIS.
 
+| ⬅ None | [Overview](../README.md) | [Next ➡](../digitising/index.md)
 
 ## Requirements 
 **Software**: [QGIS](https://qgis.org) is a free and open-source GIS. This tutorial uses version **QGIS 3.34.4-Prizren**.
