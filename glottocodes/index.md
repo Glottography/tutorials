@@ -1,9 +1,9 @@
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md"><b>Attributes & Metadata tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../metadata/index.md">Attributes & Metadata tutorial &nbsp; ⬅ &nbsp;</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../curation/index.md"><b> &nbsp; ➡ &nbsp; Data curation tutorial</b></a>
+  <a href="../curation/index.md">&nbsp; ➡ &nbsp; Data curation tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -202,10 +202,10 @@ A CSV file containing the attribute and Glottocode data, linked to the digitised
 
 --------------
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md"><b>Attributes & Metadata tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../metadata/index.md">Attributes & Metadata tutorial &nbsp; ⬅ &nbsp;</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../curation/index.md"><b> &nbsp; ➡ &nbsp; Data curation tutorial</b></a>
+  <a href="../curation/index.md">&nbsp; ➡ &nbsp; Data curation tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>

@@ -1,7 +1,7 @@
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md"><b>Glottocode tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../glottocodes/index.md">Glottocode tutorial &nbsp; ⬅ &nbsp;</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -174,9 +174,9 @@ The `cldf` folder includes three sets of vector geometries, each enriched with G
 
 ---------
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md"><b>Glottocode tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../glottocodes/index.md">Glottocode tutorial &nbsp; ⬅ &nbsp;</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 

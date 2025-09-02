@@ -1,9 +1,9 @@
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../georeferencing/index.md"><b>Georeferencing tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../georeferencing/index.md">Georeferencing tutorial &nbsp; ⬅ &nbsp; </a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md"><b> &nbsp; ➡ &nbsp; Attributes & metadata tutorial</b></a>
+  <a href="../metadata/index.md">&nbsp; ➡ &nbsp; Attributes & metadata tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
 
@@ -463,10 +463,10 @@ A GeoPackage file containing language polygons and attributes (see [Attributes a
 
 ------------------
 <p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../georeferencing/index.md"><b>Georeferencing tutorial &nbsp; ⬅ &nbsp; </b></a>
+  <a href="../georeferencing/index.md">Georeferencing tutorial &nbsp; ⬅ &nbsp;</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md"><b>Overview</b></a>
+  <a href="../README.md">Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md"><b> &nbsp; ➡ &nbsp; Attributes & metadata tutorial</b></a>
+  <a href="../metadata/index.md">&nbsp; ➡ &nbsp; Attributes & metadata tutorial</a>
   &nbsp;&nbsp;&nbsp;
 </p>
