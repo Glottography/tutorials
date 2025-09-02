@@ -1,0 +1,15 @@
+# Minimal GitHub Pages configuration
+title: ""               
+description: "My project site"
+theme: minima           
+plugins:
+  - jekyll-feed         
+  - jekyll-seo-tag      
+
+# Optional: include custom CSS
+sass:
+  style: compressed
+
+# Include folder for custom CSS
+include:
+  - assets/css/custom.css
