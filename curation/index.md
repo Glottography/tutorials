@@ -5,11 +5,11 @@ This tutorial shows how to turn the language polygons from the [Digitising tutor
 
 ### Requirements
 
-**Software:**[Python 3](https://www.python.org/) is a high-level, free, and open-source programming language. This tutorial uses version 3.12 with the `geopandas`, `pyglottography` and `pybtex` packages installed (see below).
+**Software:** [Python 3](https://www.python.org/) is a high-level, free, and open-source programming language. This tutorial uses version 3.12 with the `geopandas`, `pyglottography` and `pybtex` packages installed (see below).
 
 `pyglottography` also requires a working [GDAL](https://gdal.org/en/stable/) installation. GDAL is a library for handling geospatial data formats.
 
-**Data:**  A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see the [Attributes and Metadata tutorial](../attributes/index.md)). The Alor–Pantar language polygons, including attribute data, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
+**Data:** A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see the [Attributes and Metadata tutorial](../metadata/index.md)). The Alor–Pantar language polygons, including attribute data, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
 
 A CSV file containing the attribute data, linked to the digitised polygons via the `id` column. The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
 
