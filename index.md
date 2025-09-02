@@ -4,11 +4,11 @@ This tutorial series walks you through the five main steps to create **language 
 
 ### What you need
 
-The only essential input is **a digital raster image of a language map** (e.g., a PNG, JPG, TIFF) from a citable scientific publication. For software, you need [QGIS](https://qgis.org), an open-source geographic information system (GIS), and [Python 3](https://www.python.org/), a free and open-source programming language.
+The only essential input is a digital raster image of a language map (e.g., a PNG, JPG, TIFF) from a citable scientific publication. For software, you need [QGIS](https://qgis.org), an open-source geographic information system (GIS), and [Python 3](https://www.python.org/), a free and open-source programming language.
 
 ### Output
 
-A set of fully digitised **language polygons** in [Cross-Linguistic Data Format (CLDF)](https://cldf.clld.org/), including attributes and metadata, ready for upload to **Glottography**.  
+A set of fully digitised language polygons in [Cross-Linguistic Data Format (CLDF)](https://cldf.clld.org/), including attributes and metadata, ready for upload to Glottography.  
 
 
 ### Tutorials
@@ -19,7 +19,7 @@ A set of fully digitised **language polygons** in [Cross-Linguistic Data Format 
 
 3. Adding [Attributes and Metadata](metadata/index.md) – Record language attributes and information from the source publications.
 
-4. [Glottocodes](glottocodes/index.md) – Unique identifiers for languages maintained by Glottolog. This tutorial shows how to programmatically add Glottocodes to language polygons when they are missing from the source map.
+4. [Glottocodes](glottocodes/index.md) – Programmatically add Glottocodes – unique identifiers for languages maintained by Glottolog – to language polygons when they are missing from the source map.
 
 5. [Data Curation](curation/index.md) – Combine the digitised language polygons with their attributes and metadata to create a CLDF dataset ready for upload to Glottography.
 
