@@ -1,25 +1,15 @@
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md">Digitising tutorial &nbsp; ⬅ &nbsp; </a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md"> &nbsp; ➡ &nbsp; Glottocode tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>
-
-
 # Attributes and Metadata
 
 This tutorial introduces the attributes and metadate required when digitising Glottography language areas from source publications. Glottography uses BibTeX entries to uniquely reference each source publication, and Glottocodes to identify the languages depicted in their maps. Because Glottocodes were introduced only relatively recently, many source publications — especially older ones — likely do not include them. As a result, assigning the correct Glottocodes to a language area can be time-consuming and may require additional effort. To assist with this process, a separate [Glottocode tutorial](../glottocodes/index.md)  explains how to automatically query and assign Glottocodes to a language area based on language name and geographic location.
 
 ## Requirements 
-**Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version **QGIS 3.34.4-Prizren**.
+**Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version QGIS 3.34.4-Prizren.
 
 **Data:** Digitised language polygons in GeoPackage format (`.gpkg`).  In this tutorial, we use the digitised Alor–Pantar language polygons from the [Digitising tutorial](../digitising/index.md), which can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
 
 
-## Metadata
-### Referencing the source publication
+### Metadata
+#### Referencing the source publication
 
 A source publication is any piece of work that includes a language map we wish to incorporate into Glottography. For example, the map of the Alor and Pantar languages that we [georeferenced](../georeferencing/index.md) and [digitised](../digitising/index.md) earlier was taken from the book chapter *Introduction to The Papuan Languages of Timor, Alor and Pantar* (https://doi.org/10.1515/9781501511158-001) by Schapper (2020). Glottography records source publications using the BibTeX format. BibTeX stores metadata on bibliography items, such as articles, books, and theses, in plain text files, typically with the `.bib` file extension. A single BibTeX file can contain multiple entries, but for our purposes, each file must contain exactly one. The publication by Schapper (2020) has the following BibTeX entry:
 
@@ -44,7 +34,7 @@ A source publication is any piece of work that includes a language map we wish t
 The BibTeX entry consists of the entry type (e.g., `@inbook`), a citation key (e.g., `schapper2020papuan`), and several fields or tags that define the details of the publication, such as `author`, `title`, and `url`. The type `@inbook` indicates that the source is a chapter in a book. Similarly, `@article` is used for journal articles, and `@book` for standalone books. Glottography requires the citation key to follow the format `authorYYYYtopic`, and the corresponding BibTeX file must be named `authorYYYYtopic.bib`, for example, `schapper2020papuan.bib`. The Glottography import script in the [data curation tutorial](../curation/index.md) depends on both the citation key and the file name being in this exact format to function correctly.
 
 
-### How to obtain a BibTeX Entry
+#### How to obtain a BibTeX Entry
 There are four main ways to obtain a BibTeX entry for a source publication, which we will briefly cover here.
 
 The easiest method is likely to check Glottolog. By visiting the [Glottolog website](https://glottolog.org/), you can use the "Reference Search" feature to enter bibliographic information such as the author’s name and publication year. Once you retrieve the relevant entry, you can open it, copy the BibTeX citation, and paste it into a plain text editor like Notepad++. You'll then need to adjust the title and citation key to follow the required `authorYYYYtopic` format and save the file under the same name with a `.bib` extension.
@@ -56,8 +46,8 @@ A third method is to use [Google Scholar](https://scholar.google.com/). You can 
 Finally, if you are familiar with BibTeX syntax, you can simply write the entry by hand. Regardless of which method you choose, the end result should be a `.bib` file containing a single entry. The file name must follow the `authorYYYYtopic.bib` format, and the citation key inside the file must match the file name.
 
 
-## Attributes
-### Collecting attribute data for the language areas
+### Attributes
+#### Collecting attribute data for the language areas
 
 When [digitising language areas](../digitising/index.md), **Glottography** requires attribute data describing the languages each area represents. This attribute data is usually recorded during digitisation but can also be added later. The following attributes must be included:
 
@@ -88,7 +78,7 @@ The table below shows the attributes for selected language areas from the Alor-P
 
 
 
-### Exporting the attribute data as CSV
+#### Exporting the attribute data as CSV
 
 Glottography expects attribute data to be exported to a separate CSV file, where each row corresponds to a digitised language area and is linked to the polygon geometry via a unique identifier (`id`). Keeping metadata in plain-text CSV format makes it easy to update and manage. It is both human-readable and compatible with version control tools like Git. The GeoPackage file can easily be exported as a CSV in QGIS. The following steps assume that QGIS is open and that all language areas and their polygons have been recorded and saved in a GeoPackage, following the [Digitising Tutorial](../digitising/index.md).
 
@@ -114,19 +104,9 @@ In the dialog that appears configure the export settings. Set **Format** to `Com
 
 &nbsp;
 
-## Output
+### Output
 A BibTeX file containing a reference to the source publication in BibTeX format.  The BibTeX file for the Alor–Pantar language map can be downloaded [here](out/schapper2020papuan.bib).
 
 A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)) and attributes (see also the [Glottocodes tutorial](../glottocodes/index.md)).  The Alor–Pantar language polygons including atttribute data can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
 
 A CSV file containing the attribute data, linked to the digitised polygons via the `id` column.  The CSV file for the Alor–Pantar language polygons can be downloaded [here](out/schapper2020papuan.csv).
-
------------------ 
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md">Digitising tutorial &nbsp; ⬅ &nbsp; </a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md">&nbsp; ➡ &nbsp; Glottocode tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>

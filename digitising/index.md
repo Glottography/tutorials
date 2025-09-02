@@ -1,4 +1,4 @@
-# Digitising language polygons in QGIS
+# Digitising language polygons
 
 Digitising is the process of tracing features from a georeferenced map and converting them into digital points, lines, or— in our case—polygons that a GIS can interpret. In this tutorial, we will digitise the language areas shown on the Alor-Pantar map by Schapper (2020), which we georeferenced in the [Georeferencing tutorial](../georeferencing/index.md). This tutorial focuses on copying the geometry of the language polygons from the map. For information on how to copy attributes (including Glottocodes) and metadata, see the [Attributes and Metadata](../metadata/index.md) and the [Glottocodes tutorial](../glottocodes/index.md). 
 
