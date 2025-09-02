@@ -1,7 +1,3 @@
----
-title: Glottography tutorials
-layout: default
----
 # Glottography tutorials
 
 This tutorial series walks you through the five main steps to create **language speaker area polygons** from a language map image, ready for upload to [**Glottography**](https://github.com/Glottography)*. 
