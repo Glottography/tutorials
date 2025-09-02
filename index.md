@@ -1,5 +1,5 @@
 ---
-title: Glottography tutorialsss
+title: Glottography tutorials
 layout: default
 ---
 
