@@ -1,16 +1,9 @@
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md">Glottocode tutorial &nbsp; ⬅ &nbsp;</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
-
 # Data curation
 
 This tutorial shows how to turn the language polygons from the [Digitising tutorial](../digitising/index.md), along with their attributes and metadata from the [Attributes and Metadata tutorial](../metadata/index.md), into a dataset ready for [Glottography](https://github.com/Glottography). Data curation aggregates the polygons into languages and language families according to Glottolog.
 
 
-## Requirements
+### Requirements
 
 **Software:** 
 
@@ -29,7 +22,7 @@ A BibTeX file containing a reference to the source publication in BibTeX format.
 A local clone of the latest [Glottolog](https://github.com/glottolog) repository (see below). This data will be used to assign the language polygons to languoids classified as languages or families according to Glottolog.
 
 
-## Overview 
+### Overview 
 
 Before we can run the `pyglottography` scripts and curate the language polygons, a bit of housekeeping and data prep is needed. This tutorial covers the following steps:
 
@@ -40,7 +33,7 @@ Before we can run the `pyglottography` scripts and curate the language polygons,
 - [Run the data curation script](#running-the-data-curation-script).
 
 
-## Installing the required packages
+### Installing the required packages
 
 Creating a Glottography dataset requires the [`pyglottography`](https://pypi.org/project/pyglottography/) package, which can be installed from command line or terminal:
 
@@ -62,8 +55,8 @@ Finally, the GDAL library for handling different geospatial data formats is also
 
 
 
-## Gathering data in proper format
-###  Converting the language polygons to GeoJSON format
+### Gathering data in proper format
+####  Converting the language polygons to GeoJSON format
 
 When digitising the language polygons, we stored them in GeoPackage format, a well-supported format in QGIS for handling spatial data. `pyglottography`, however, requires GeoJSON, a lightweight, human-readable format for representing geographic features, so we need to convert the GeoPackage. This task that takes little more than a line of Python code:
 
@@ -77,7 +70,7 @@ You might be wondering why we don't use GeoJSON from the start. GeoPackages allo
 
 Note that the script above assumes the GeoPackage data is already in the `EPSG:4326` CRS, which is true for our dataset. If a different CRS was used during digitisation, the data must be reprojected to `EPSG:4326` first. Note also that the output file name (`dataset.geojson`) already hints at an important aspect of running the `pyglottography` data curation: the script expects all input data to follow specific naming conventions and be placed in designated locations on your computer.
 
-### Cloning the Glottolog data 
+#### Cloning the Glottolog data 
 
 The `pyglottography` package uses Glottolog to align the polygons with languages and language families. To do this, it requires a local copy of the Glottolog raw data, which can be cloned from GitHub. Cloning creates a full local copy of the Glottolog repository on a local computer. Navigate to a suitable folder and clone the current release of the Glottolog raw data from GitHub using the command line or terminal:
 
@@ -95,7 +88,7 @@ git pull
 This checks the status of your local repository and pulls the latest changes from GitHub.
 
 
-## Initiating a Glottography dataset
+### Initiating a Glottography dataset
 
 Next, we initiate a new Glottography dataset from the command line or terminal:
 
@@ -128,7 +121,7 @@ The three main folders are still mostly empty:
 - `raw`: in this folder, the curation script expects the (raw) language polygons in GeoJSON format 
 - `cldf`: in this folder the curation script stores the CLDF datasets, i.e. the polygons aggragated to the Glottolog languages and language families
 
-## Distributing the data into their designated folders
+### Distributing the data into their designated folders
 
 Next, we distribute the language polygons, attribute data, and reference into their designated folders. The `pyglottography` curation script requires the data to follow specific file-naming conventions and to be stored in the correct folders:
 
@@ -150,7 +143,7 @@ The screenshot below shows the `raw` and the `etc` folder after distributing the
 &nbsp;
 
 
-## Running the data curation script
+### Running the data curation script
 
 With all data in place, we can now run the curation process. From a command-line terminal, navigate into the Glottography dataset folder and invoke the `makecldf` command, pointing it to the dataset script. The `--glottolog` flag specifies the path to your local clone of the Glottolog data:
 
@@ -160,7 +153,7 @@ cldfbench makecldf cldfbench_schapper2020papuan.py --glottolog PATH_TO_GLOTTOLOG
 ```
 The `makecldf` command is part of the cldfbench workflow. It takes care of assembling the CLDF dataset from the language polygons in the `raw` folder and attributes and reference in the `etc` folder.
    
-## Output
+### Output
 
 The CLDF folder includes three sets of vector geometries enriched with Glottocodes at three levels of aggregation in GeoJSON format:
 
@@ -172,13 +165,6 @@ The `cldf` folder includes three sets of vector geometries, each enriched with G
 
 **Family areas:** Speaker areas aggregated at the language family level according to Glottolog's classification (`families.geojson`). The Family areas GeoJSON file of the Alor–Pantar languages map can be downloaded [here](out/families.geojson).
 
----------
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../glottocodes/index.md">Glottocode tutorial &nbsp; ⬅ &nbsp;</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
 
 
 

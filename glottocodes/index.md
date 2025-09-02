@@ -1,18 +1,9 @@
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md">Attributes & Metadata tutorial &nbsp; ⬅ &nbsp;</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../curation/index.md">&nbsp; ➡ &nbsp; Data curation tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>
-
-# Finding Glottocodes
+# Glottocodes
 
 In this tutorial, we will find the Glottocodes for the language areas shown on the Alor-Pantar map (Schapper, 2020).  We georeferenced the map in the [Georeferencing tutorial](../georeferencing/index.md), digitised the language areas in the [Digitising tutorial](../digitising/index.md) and recorded attributes and metadata in the [Attributes and Metadata tutorial](../metadata/index.md). 
 
 
-## Requirements 
+### Requirements 
 
 **Software:** [Python 3](https://www.python.org/) is a high-level free and open-source programming language. This tutorial uses version 3.12 with the `guess_glottocode` package installed. For installation instructions, see below.
 
@@ -21,7 +12,7 @@ In this tutorial, we will find the Glottocodes for the language areas shown on t
 **API keys:** The `guess_glottocode` package sends requests to a large language model (LLM) provider to find Glottocodes. Currently supported providers are [Google Gemini](https://aistudio.google.com/apikey) and [Anthropic](https://console.anthropic.com/settings/keys). To use either service, you must first create an API key from the provider (see below).
 
 
-## What is a Glottocode? 
+### What is a Glottocode? 
 
 Glottocodes are unique identifiers for languages, dialects, and language families, maintained by [Glottolog](https://glottolog.org).  
 The simplest way to find a Glottocode is to look it up manually:
@@ -34,7 +25,7 @@ This works fine for a few languages, but it quickly becomes tedious when you nee
 Instead, we can add Glottocodes programmatically using the [`guess_glottocode` package] (https://github.com/derpetermann/guess_glottocode) in Python. The package can guess a language's Glottocode either using a large language model (LLM) via an API or by querying Wikipedia. This tutorial focuses on finding Glottocodes with an LLM.  
 
 
-## Install the `guess_glottocode` package
+### Install the `guess_glottocode` package
 
 The package requires Python 3.12+ and depends on several other packages, including:
 
@@ -51,20 +42,20 @@ pip install git+https://github.com/derpetermann/guess_glottocode.git
 
 Full installation guidelines are available in the project's [README file](https://github.com/derpetermann/guess_glottocode/blob/main/README.md).
 
-## API keys
+### API keys
 
-When using a large language model (LLM) to find a Glottocode, the package sends a request to an LLM provider.  Currently supported providers are **Google Gemini** and **Anthropic**. To use either service, you must first create an API key.
+When using a large language model (LLM) to find a Glottocode, the package sends a request to an LLM provider.  Currently supported providers are Google Gemini and Anthropic. To use either service, you must first create an API key.
 
-- **Google Gemini** - Create an API key at [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey).  
+- Google Gemini - Create an API key at [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey).  
   You'll need a Google account and must be logged in.
-- **Anthropic** - Create an API key at [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys).  
+- Anthropic - Create an API key at [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys).  
   You'll need to sign up for and log in to an Anthropic account.
 
 Moderate use of the package should not incur third-party API costs, but heavy usage may.
 
 The first time you call `llm.guess_glottocode` with Gemini or Anthropic, the package will prompt you to enter your API key.  The key is stored securely on your local machine via the `keyring` package, so you won't need to enter it again in future sessions.
 
-## Load the data
+### Load the data
 
 First, we load the Alor-Pantar GeoPackage file using GeoPandas' `read_file()` function. GeoPandas is a Python library for working with geospatial data in tabular form. Its `read_file()` function imports spatial data into a GeoDataFrame, preserving both attribute data and geometry, including the coordinate reference system (CRS).
 
@@ -93,7 +84,7 @@ print(polygons.head(10))
     9  10      Kamang          Map3  2020      MULTIPOLYGON (((124.8879 -8.16338, 124.8897 -8... 
     
                                                 
-## Finding a Suitable Glottocode Using an LLM
+### Finding a Suitable Glottocode Using an LLM
 
 While large language models (LLMs) can sometimes guess a language's Glottocode from its name, this approach is unreliable. LLMs may hallucinate nonexistent codes or confuse languages with similar names.  A more reliable approach is to 
 
@@ -124,7 +115,7 @@ def glottocode_per_row(row):
 polygons['unverified_glottocode'] = polygons.apply(glottocode_per_row, axis=1)
 ```
 
-## Verify the Glottocde match
+### Verify the Glottocde match
 
 We can verify Glottocode matches using additional information maintained by Glottolog. Each Glottocode is linked to a GitHub page containing the language's primary name and any alternative names. The `verify_glottocode_guess` function queries that page and checks whether the language name appears as the primary name or among the alternatives. If it does, the function returns `True`; otherwise, it returns `False`.  
 
@@ -179,7 +170,7 @@ print(polygons.head[['name', 'glottocode']])
 The approach successfully identified and verified Glottocodes for 18 out of 25 languages. The entries with `None` indicate that no verified Glottocode was found automatically, so these will need to be added manually or through further refinement, such as a larger buffer size.
 
 
-## Export to file 
+### Export to file 
 
 Once the Glottocodes are verified, we remove the column `unverified_glottocode` and export the GeoDataFrame to a `GeoPackage` file.
 
@@ -194,18 +185,8 @@ We also export the attribute information as a `CSV` file. For details on why thi
 polygons.drop(columns="geometry").to_csv("schapper2020papuan.csv", index=False)
 ```
 
-## Output
+### Output
 
 A GeoPackage file containing the language polygons (see the [Digitising tutorial](../digitising/index.md)), attributes, and Glottocodes (see also the [Attributes and metadata tutorial](../metadata/index.md)).  The Alor–Pantar language polygons, including attribute data and Glottocodes, can be downloaded [here](../digitising/out/schapper2020papuan.gpkg). Note that in this file some Glottocodes were added manually.  
 
 A CSV file containing the attribute and Glottocode data, linked to the digitised polygons via the `id` column. The CSV file for the Alor–Pantar language polygons can be downloaded [here](../metadata/out/schapper2020papuan.csv).
-
---------------
-<p align="center">&nbsp;&nbsp;&nbsp;
-  <a href="../metadata/index.md">Attributes & Metadata tutorial &nbsp; ⬅ &nbsp;</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../curation/index.md">&nbsp; ➡ &nbsp; Data curation tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>

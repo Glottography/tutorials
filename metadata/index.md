@@ -2,7 +2,7 @@
 
 This tutorial introduces the attributes and metadate required when digitising Glottography language areas from source publications. Glottography uses BibTeX entries to uniquely reference each source publication, and Glottocodes to identify the languages depicted in their maps. Because Glottocodes were introduced only relatively recently, many source publications — especially older ones — likely do not include them. As a result, assigning the correct Glottocodes to a language area can be time-consuming and may require additional effort. To assist with this process, a separate [Glottocode tutorial](../glottocodes/index.md)  explains how to automatically query and assign Glottocodes to a language area based on language name and geographic location.
 
-## Requirements 
+### Requirements 
 **Software**: [QGIS](https://qgis.org) is a free and open-source geographic information system (GIS). This tutorial uses version QGIS 3.34.4-Prizren.
 
 **Data:** Digitised language polygons in GeoPackage format (`.gpkg`).  In this tutorial, we use the digitised Alor–Pantar language polygons from the [Digitising tutorial](../digitising/index.md), which can be downloaded [here](../digitising/out/schapper2020papuan.gpkg).
