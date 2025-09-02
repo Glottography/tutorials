@@ -1,13 +1,4 @@
-<p align="center">
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md">&nbsp; ➡ &nbsp; Digitising tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>
-
-
-# Georeferencing language maps in QGIS
+# Georeferencing language maps
 
 This tutorial walks you through the process of georeferencing a language map provided as a raster image in QGIS, an open-source geographic information system (GIS). Georeferencing assigns geographic coordinates to the map, enabling it to be accurately located and displayed in a GIS.
 
@@ -184,12 +175,3 @@ A georeferenced map in GeoTIFF format: GeoTIFF is a standard raster format that 
 ## References
 
 Schapper, Antoinette. 2020. *Introduction to The Papuan Languages of Timor, Alor and Pantar*. In Antoinette Schapper (ed.), *The Papuan Languages of Timor, Alor and Pantar: Volume 3*, pp. 1–52. Berlin, Boston: De Gruyter Mouton. [https://doi.org/10.1515/9781501511158-001](https://doi.org/10.1515/9781501511158-001)
-
------------------ 
-<p align="center">
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../README.md">Overview</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="../digitising/index.md">&nbsp; ➡ &nbsp; Digitising tutorial</a>
-  &nbsp;&nbsp;&nbsp;
-</p>
