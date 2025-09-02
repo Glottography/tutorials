@@ -6,7 +6,7 @@ This tutorial series walks you through the five main steps to create **language 
 
 ## What you need
 
-The only essential input is **a digital raster image of a language map** (e.g., PNG, JPG, TIFF) from a citable scientific publication. For software, you need [QGIS](https://qgis.org), an open-source geographic information system (GIS), and [Python 3](https://www.python.org/), a free and open-source programming language.
+The only essential input is **a digital raster image of a language map** (e.g., a PNG, JPG, TIFF) from a citable scientific publication. For software, you need [QGIS](https://qgis.org), an open-source geographic information system (GIS), and [Python 3](https://www.python.org/), a free and open-source programming language.
 
 ## Output
 
@@ -30,8 +30,4 @@ A set of fully digitised **language polygons** in [Cross-Linguistic Data Format 
 5. [Data curation](curation/index.md)  
    Combine the digitised language polygons with their attributes and metadata to create a CLDF dataset ready for upload to Glottography.  
 
----
 
-## How to use 
-- Click any link above to open the tutorial.  
-- You can also navigate via the sidebar in GitHub when browsing this repo.  
