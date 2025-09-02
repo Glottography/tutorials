@@ -5,10 +5,10 @@ plugins:
 
   
 title: "Glottography tutorials"
-description: |
-  From a language map image to a Glottography dataset in five steps"
-
-  [Home](/)  
-  [Chapter 1](/chapter1)  
-  [Chapter 2](/chapter2)  
-  [GitHub Repo](https://github.com/username/repo)s
+description:  >
+    From a language map image to a Glottography dataset in five steps<br><br>
+  <a href="/">Home</a><br>
+  <a href="/chapter1">Chapter 1</a><br>
+  <a href="/chapter2">Chapter 2</a><br>
+  <a href="https://github.com/username/repo">GitHub Repo</a>
+  
