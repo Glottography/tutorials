@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Glottography Tutorials"
+version: "v1.0.2"
+authors:
+  - family-names: Ranacher
+    given-names: Peter
+date-released: 2026-01-19
+url: "https://glottography.github.io/tutorials/"
+doi: 10.5281/zenodo.18299784
