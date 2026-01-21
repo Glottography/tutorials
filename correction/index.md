@@ -99,6 +99,8 @@ Instead of exporting the polygon as a GeoPackage, as in the Digitising tutorial,
   <figcaption><em>Exporting the added polygon.</em></figcaption>
 </figure>
 
+&nbsp;
+
 In the dialog that opens, set the **Format** to **GeoJSON**. Use the polygon `id` as the **Filename** and save the file to the **etc** folder in the repository.
 
 <figure>
@@ -106,12 +108,16 @@ In the dialog that opens, set the **Format** to **GeoJSON**. Use the polygon `id
   <figcaption><em>The form for exporting the polygon as GeoJSON.</em></figcaption>
 </figure>
 
+&nbsp;
+
 After saving, the **etc** folder should now contain an additional GeoJSON file named **`7015.geojson`**.
 
 <figure>
   <img src="images/etc_folder_after.png" alt="The geojson file in the etc folder" width="500" />
   <figcaption><em>The 7015.geojson file in the etc folder.</em></figcaption>
 </figure>
+
+&nbsp;
 
 To modify the geometry of an existing polygon, load it in QGIS, change its shape, and then export the updated polygon as GeoJSON, just as when adding a new polygon.
 
@@ -133,3 +139,5 @@ Finally, add a comment on the issue and select **Close with comment** to mark it
   <img src="images/close_issue.png" alt="Closing the issue" width="800" />
   <figcaption><em>Closing the issue on GitHub.</em></figcaption>
 </figure>
+
+&nbsp;
