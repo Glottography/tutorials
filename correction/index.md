@@ -69,6 +69,8 @@ Each row in `features.csv` corresponds to a single polygon in the dataset, while
   <figcaption><em>Changing the Glottocode of an entry in the features.csv file.</em></figcaption>
 </figure>
 
+&nbsp;
+
 Once the change is saved, the corrected Glottocode will be picked up automatically when the dataset is rebuilt in the subsequent steps of the workflow, with the `id` (e.g. 5680) linking the attribute information to the polygon in in `dataset.geojson`. 
 
 Similarly, before adding the missing polygon for Letzeburgesch, we first add its metadata to the `features.csv` file. Since no polygon for Letzeburgesch currently exists in `dataset.geojson`, this requires creating a new entry in `features.csv`. In this case, the `id` must be new and unique, as it will correspond to the polygon ID that we add in the next step. The new entry includes the language name, a year, the Glottocode, the map name(s), and optional legend number(s).  For more information on attribute in Glottography, see the tutorial on [Attributes and metadata](../metadata/index.md).
@@ -80,6 +82,7 @@ For Letzeburgesch, we add the following row to `features.csv`:
   <figcaption><em>Adding an entry to the features.csv file.</em></figcaption>
 </figure>
 
+&nbsp;
 
 ### Modifying the geometry 
 
