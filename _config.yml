@@ -5,7 +5,7 @@ plugins:
   
 title: "Glottography Data Tutorials"
 description: 
-    From a language map image to a Glottography dataset in five tutorials<br><br>
+    From a language map image to a Glottography dataset in six tutorials<br><br>
     
   <a href="/tutorials">Overview</a><br><br>
   <a href="/tutorials/georeferencing">Georeferencing</a><br>
@@ -13,5 +13,6 @@ description:
   <a href="/tutorials/metadata">Attributes & Metadata</a><br>
   <a href="/tutorials/glottocodes">Glottocodes</a><br>
   <a href="/tutorials/curation">Data Curation</a><br>
+  <a href="/tutorials/correction">Error Correction</a><br>
 
   

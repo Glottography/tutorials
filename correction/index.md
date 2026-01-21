@@ -1,6 +1,6 @@
-# Error correction workflow
+# Error correction
 
-In a project with the scope of Glottography, errors are inevitable. To handle such issues systematically, Glottography follows a structured error-correction workflow. Broadly, errors fall into two main categories:
+In a project with the scope of Glottography, errors are inevitable. To handle such issues systematically, Glottography follows a structured error correction workflow. Broadly, errors fall into two main categories:
 
 - **Geometric errors**, such as missing, misplaced, or incorrect geometries.
 - **Attribute errors**, where the geometry is correct but the associated metadata or attribute information is wrong or incomplete.
@@ -56,7 +56,7 @@ Glottography maintains `features.csv` specifically to make updates straightforwa
 Here, we open the `features.csv` file located in the `etc` folder of a local clone of the repository using a simple text editor. Note that it would also be possible to edit the file directly on GitHub using the editing tool. 
 
 <figure>
-  <img src="images/etc_folder_before.png" alt="The features.csv file in the etc folder." width="800" />
+  <img src="images/etc_folder_before.png" alt="The features.csv file in the etc folder." width="500" />
   <figcaption><em>The features.csv file in the etc folder of a Glottography repository.</em></figcaption>
 </figure>
 
@@ -102,14 +102,14 @@ Instead of exporting the polygon as a GeoPackage, as in the Digitising tutorial,
 In the dialog that opens, set the **Format** to **GeoJSON**. Use the polygon `id` as the **Filename** and save the file to the **etc** folder in the repository.
 
 <figure>
-  <img src="images/geojson_form.png" alt="The geojson form" width="800" />
+  <img src="images/geojson_form.png" alt="The geojson form" width="500" />
   <figcaption><em>The form for exporting the polygon as GeoJSON.</em></figcaption>
 </figure>
 
 After saving, the **etc** folder should now contain an additional GeoJSON file named **`7015.geojson`**.
 
 <figure>
-  <img src="images/etc_folder_after.png" alt="The geojson file in the etc folder" width="800" />
+  <img src="images/etc_folder_after.png" alt="The geojson file in the etc folder" width="500" />
   <figcaption><em>The 7015.geojson file in the etc folder.</em></figcaption>
 </figure>
 
@@ -125,7 +125,7 @@ We can then verify that all changes have been applied downstream and that the up
 
 ### Resolving the issue
 
-After confirming the changes, we can push them to GitHub. For guidance, see GitHub's article on [working with and adding files to a repository](https://docs.github.com/en/repositories/working-with-files).  
+After confirming the changes, we can push them to GitHub. For guidance, see GitHub's article on [managing files](https://docs.github.com/en/repositories/working-with-files/managing-files).  
 
 Finally, add a comment on the issue and select **Close with comment** to mark it as resolved.
 
